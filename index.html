@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKA Yoga + hari bani | Oaxaca</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Entry Point -->
+    <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-texture text-oaxaca-text font-sans antialiased selection:bg-oaxaca-clay selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-oaxaca-cream/95 backdrop-blur-sm border-b border-oaxaca-wood/10 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer group" data-link="home">
+                    <img src="/logo.png" alt="Maka Yoga Logo" class="h-12 w-auto mr-3 group-hover:opacity-80 transition duration-300">
+                    <span class="font-serif text-3xl font-bold text-oaxaca-wood group-hover:opacity-80 transition duration-300 transform -rotate-1">
+                        MAKA <span class="text-oaxaca-clay font-bold">YOGA</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-12">
+                    <button data-link="vision" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Visión</button>
+                    <button data-link="team" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Nosotras</button>
+                    <button data-link="schedule" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Horarios</button>
+                    <button data-link="space" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Espacio</button>
+                    <button data-link="contact" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Contacto</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-oaxaca-wood hover:text-oaxaca-clay focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-oaxaca-cream absolute w-full border-b border-oaxaca-wood/10 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-4 text-center flex flex-col">
+                <button data-link="vision" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Visión</button>
+                <button data-link="team" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Nosotras</button>
+                <button data-link="schedule" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Horarios</button>
+                <button data-link="space" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Espacio</button>
+                <button data-link="contact" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Contacto</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= VISTA: HOME ================= -->
+    <div id="page-home">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="relative mt-20 grid grid-cols-1 place-items-center bg-oaxaca-wood min-h-[calc(100vh-5rem)]">
+            
+            <!-- Contenedor del Carrusel -->
+            <div id="hero-carousel" class="col-start-1 row-start-1 w-full grid grid-cols-1 z-0">
+                <div class="col-start-1 row-start-1 w-full transition-opacity duration-2000 ease-in-out opacity-100" data-carousel-item>
+                    <img src="assets/carrusel_intro/1.jpg" alt="Estudio de Yoga Vacío Minimalista" class="w-full h-auto min-h-[calc(100vh-5rem)] object-cover object-top brightness-75">
+                </div>
+                <div class="col-start-1 row-start-1 w-full transition-opacity duration-2000 ease-in-out opacity-0" data-carousel-item>
+                    <img src="assets/carrusel_intro/2.jpg" alt="Detalle de Práctica y Naturaleza" class="w-full h-auto min-h-[calc(100vh-5rem)] object-cover object-top brightness-75">
+                </div>
+                <div class="col-start-1 row-start-1 w-full transition-opacity duration-2000 ease-in-out opacity-0" data-carousel-item>
+                    <img src="assets/carrusel_intro/3.jpg" alt="Espacio de Calma" class="w-full h-auto min-h-[calc(100vh-5rem)] object-cover object-top brightness-75">
+                </div>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4 z-20">
+                <button class="w-2 h-2 rounded-full bg-white transition-all duration-300 scale-150" aria-label="Slide 1" data-carousel-indicator="0"></button>
+                <button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300" aria-label="Slide 2" data-carousel-indicator="1"></button>
+                <button class="w-2 h-2 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300" aria-label="Slide 3" data-carousel-indicator="2"></button>
+            </div>
+            
+            <!-- Contenido Hero -->
+            <div class="col-start-1 row-start-1 z-10 text-center px-4 max-w-4xl mx-auto fade-in-up pointer-events-none">
+                <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-white mb-6 leading-none shadow-sm">
+                    Un refugio seguro <br>
+                    <span class="text-4xl md:text-6xl lg:text-7xl block mt-2 text-oaxaca-cream">para sanar en comunidad</span>
+                </h1>
+            </div>
+
+            <!-- Botón de Navegación -->
+            <div class="absolute bottom-24 left-0 w-full text-center z-10 fade-in-up pointer-events-auto">
+                <button data-link="space" class="inline-block px-8 py-4 bg-oaxaca-cream text-oaxaca-wood font-bold rounded-full hover:bg-white hover:scale-105 transition duration-300 text-lg shadow-lg">
+                    Descubre nuestro espacio
+                </button>
+            </div>
+        </section>
+
+        <!-- Intro Section (Carrusel de Mensajes) -->
+        <section class="py-24 px-6 bg-white overflow-hidden">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                
+                <div class="relative h-[450px] flex flex-col justify-center">
+                    <div class="absolute top-0 left-0 z-20">
+                        <div class="inline-block border-b-2 border-oaxaca-clay mb-4 pb-1">
+                            <span class="text-oaxaca-clay font-bold tracking-widest uppercase text-xs">La Esencia Maka</span>
+                        </div>
+                    </div>
+
+                    <div class="relative w-full h-full mt-12">
+                        <!-- Mensaje 1 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 translate-x-0 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "Bienvenida a Maka. <br>
+                                <span class="italic text-oaxaca-clay">Tu refugio en Oaxaca."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                Maka es una respuesta desde la resiliencia. Un espacio seguro en el corazón de la ciudad diseñado para que te habites de nuevo.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 2 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "Aquí no se viene a dar clases. <br>
+                                <span class="italic text-oaxaca-clay">Se viene a formar comunidad."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                No buscamos seguidores. Buscamos personas que entiendan que enseñar Yoga también es tejer redes humanas.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 3 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "El cuerpo no es estética: <br>
+                                <span class="italic text-oaxaca-clay">es territorio de memoria."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                La práctica no es para escapar de la vida, sino para poder vivirla con más recursos.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 4 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "La diversidad <br>
+                                <span class="italic text-oaxaca-clay">no es una cuota."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                Es nuestra realidad. Celebramos todos los cuerpos, edades y orígenes. Tu historia es bienvenida aquí.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 5 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "El descanso <br>
+                                <span class="italic text-oaxaca-clay">es un acto político."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                En un mundo que nos exige producir constantemente, detenernos a respirar es revolucionario.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 6 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "No somos gurús. <br>
+                                <span class="italic text-oaxaca-clay">Somos guías."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                Acompañamos tu proceso sin imponer verdades absolutas. La sabiduría ya está en ti; nosotras solo ayudamos a despertarla.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 7 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "Oaxaca es nuestra raíz <br>
+                                <span class="italic text-oaxaca-clay">y nuestra inspiración."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                Honramos la tierra que pisamos y las tradiciones que nos nutren, integrando la sabiduría local con la práctica global del yoga.
+                            </p>
+                        </div>
+
+                        <!-- Mensaje 8 -->
+                        <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 translate-x-8 flex flex-col justify-center" data-message-slide>
+                            <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
+                                "Tu presencia <br>
+                                <span class="italic text-oaxaca-clay">completa el círculo."</span>
+                            </h2>
+                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                                Maka no está completo sin ti. Cada respiración tuya aporta a la energía colectiva de este espacio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-2 mt-4 z-20 overflow-x-auto pb-2 hide-scrollbar">
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-clay transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                        <div class="h-1 w-8 md:w-12 bg-oaxaca-wood/20 transition-all duration-500 flex-shrink-0" data-msg-indicator></div>
+                    </div>
+
+                    <div class="mt-8 z-20">
+                        <button data-link="vision" class="group text-oaxaca-wood font-bold hover:text-oaxaca-clay transition flex items-center gap-2 text-sm uppercase tracking-wide">
+                            Leer Manifiesto Completo
+                            <i class="fas fa-arrow-right transform group-hover:translate-x-2 transition"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative w-full hidden md:block">
+                    <div class="aspect-[3/4] w-full rounded-t-[10rem] rounded-b-[2rem] overflow-hidden shadow-2xl z-10 grid grid-cols-1 bg-gray-100">
+                        <!-- Slide 0 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/0.jpeg" alt="Publicidad Maka 0" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 1 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/1.jpeg" alt="Publicidad Maka 1" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/2.jpeg" alt="Publicidad Maka 2" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/3.jpeg" alt="Publicidad Maka 3" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/4.jpeg" alt="Publicidad Maka 4" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/5.jpeg" alt="Publicidad Maka 5" class="w-full h-full object-cover object-center">
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="col-start-1 row-start-1 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-intro-slide>
+                            <img src="assets/carrusel_publicidad/6.jpeg" alt="Publicidad Maka 6" class="w-full h-full object-cover object-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="py-20 px-6 bg-oaxaca-cream/30 border-t border-oaxaca-wood/5">
+            <div class="max-w-7xl mx-auto">
+                 <div class="text-center mb-16">
+                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4">Voces de la Comunidad</h2>
+                </div>
+                <!-- Video content omitted for brevity but structure kept -->
+                <!-- Shorts Container (Moved Up) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-20">
+                    <!-- Short 1 -->
+                    <div class="flex flex-col items-center group">
+                        <div class="aspect-[9/16] w-full max-w-[280px] rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-black transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/sdRmRKci69s" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <span class="mt-6 font-serif text-xl text-oaxaca-wood">Sobre la Calma</span>
+                    </div>
+                     <!-- Short 2 -->
+                     <div class="flex flex-col items-center group">
+                        <div class="aspect-[9/16] w-full max-w-[280px] rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-black transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/-jYDs8fCzXE" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <span class="mt-6 font-serif text-xl text-oaxaca-wood">Sobre el Respeto</span>
+                    </div>
+                     <!-- Short 3 -->
+                     <div class="flex flex-col items-center group">
+                        <div class="aspect-[9/16] w-full max-w-[280px] rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-black transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/w5ypuMy7-XM" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <span class="mt-6 font-serif text-xl text-oaxaca-wood">Sobre la Fuerza</span>
+                    </div>
+                </div>
+
+                <!-- Video content (Moved Down) -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/SrYoQVvJqJA" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center mt-6 text-oaxaca-text/70 italic font-serif text-2xl">"Encontrar Maka fue encontrar un hogar para mi práctica."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalles Info -->
+        <section class="bg-oaxaca-wood text-oaxaca-cream py-20 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                <div>
+                    <h3 class="font-serif text-4xl mb-6">Ubicación</h3>
+                    <p class="font-normal text-lg opacity-90 mb-2">Calle Macedonio Alcalá 123</p>
+                    <p class="font-normal text-lg opacity-90">68000 Oaxaca de Juárez, Oax.</p>
+                    <div class="mt-6">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Macedonio+Alcalá+123+Centro+Histórico+Oaxaca+de+Juárez" target="_blank" aria-label="Ver en Google Maps" class="inline-block text-oaxaca-cream hover:text-red-400 transition-all duration-300 transform hover:scale-125 hover:-rotate-6">
+                            <i class="fas fa-map-marker-alt text-5xl filter drop-shadow-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                     <h3 class="font-serif text-4xl mb-6">Horarios</h3>
+                    <button data-link="schedule" class="text-xl font-normal underline decoration-1 underline-offset-4 hover:text-oaxaca-clay transition duration-300">
+                        Ver horarios
+                    </button>
+                </div>
+                <div>
+                    <h3 class="font-serif text-4xl mb-4">Contacto</h3>
+                    <p class="font-normal text-lg opacity-90 mb-8">Estamos a un mensaje de distancia.</p>
+                    <div class="flex space-x-10 justify-center md:justify-start items-center">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/529511234567" target="_blank" aria-label="WhatsApp" class="text-oaxaca-cream hover:text-green-400 transition-all duration-300 transform hover:scale-125 hover:rotate-6">
+                            <i class="fab fa-whatsapp text-6xl filter drop-shadow-lg"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" target="_blank" aria-label="Instagram" class="text-oaxaca-cream hover:text-pink-400 transition-all duration-300 transform hover:scale-125 hover:-rotate-6">
+                            <i class="fab fa-instagram text-6xl filter drop-shadow-lg"></i>
+                        </a>
+                        <!-- Facebook (Restored) -->
+                        <a href="#" target="_blank" aria-label="Facebook" class="text-oaxaca-cream hover:text-blue-400 transition-all duration-300 transform hover:scale-125 hover:rotate-6">
+                            <i class="fab fa-facebook text-6xl filter drop-shadow-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: VISIÓN ================= -->
+    <div id="page-vision" class="hidden pt-24 min-h-screen bg-white">
+        <section class="relative py-12 md:py-20 bg-white overflow-hidden">
+             <!-- Background Image -->
+            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <img src="https://images.unsplash.com/photo-1595867365697-3d9691456d35?q=80&w=2069&auto=format&fit=crop" class="w-full h-full object-cover grayscale">
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+                <div class="mb-16 text-center md:text-left">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                        &larr; Volver al inicio
+                    </button>
+                </div>
+
+                <!-- 1. SECCIÓN: FILOSOFÍA Y ÉTICA -->
+                <div class="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Filosofía (Izquierda - Grande) -->
+                    <div class="lg:col-span-7">
+                        <span class="font-serif text-2xl text-[#BBA182] italic tracking-widest block mb-4">Filosofía</span>
+                        <blockquote class="text-4xl md:text-5xl font-light text-oaxaca-wood leading-tight mb-8">
+                            "El cuerpo no es un proyecto estético: es territorio de experiencia, memoria y emoción."
+                        </blockquote>
+                        <p class="text-xl text-oaxaca-text/80 font-light border-l-4 border-[#BBA182] pl-6">
+                            La práctica no es para escapar de la vida, sino para poder vivirla con más recursos.
+                        </p>
+                    </div>
+
+                    <!-- Ética de Trabajo (Derecha - Tarjeta) -->
+                    <div class="lg:col-span-5 bg-oaxaca-cream/50 p-10 rounded-xl backdrop-blur-sm border border-oaxaca-wood/5">
+                        <h3 class="font-serif text-3xl text-oaxaca-wood mb-6">Nuestra Ética de Trabajo</h3>
+                        <ul class="space-y-4 text-oaxaca-text/90">
+                            <li class="flex items-start">
+                                <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
+                                <span>No romantizamos el dolor físico ni emocional.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
+                                <span>No fomentamos dependencia hacia la figura docente.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
+                                <span>No prometemos curas milagrosas.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
+                                <span>Derivamos a profesionales de salud cuando es necesario.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
+                                <span>Cuidamos límites, tiempos de descanso y condiciones laborales dignas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. SECCIÓN: HISTORIA -->
+                <div class="mb-20 pt-10 border-t border-oaxaca-wood/10">
+                    <span class="font-serif text-2xl text-[#BBA182] italic tracking-widest">Nuestra historia</span>
+                    <h2 class="font-sans font-light text-5xl md:text-7xl text-oaxaca-wood mt-4 leading-tight">
+                        No surgimos del privilegio,<br>
+                        <span class="font-serif italic font-bold">sino de la necesidad humana.</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-20">
+                    <div class="md:col-span-5 md:col-start-1 relative">
+                        <span class="absolute -top-16 -left-4 text-9xl font-bold text-oaxaca-cream opacity-50 select-none z-[-1]">2017</span>
+                        <h3 class="font-serif text-4xl text-[#BBA182] mb-6">El Origen</h3>
+                        <div class="prose prose-lg text-oaxaca-text font-light leading-relaxed text-justify">
+                            <p class="mb-6">
+                                Todo comenzó en octubre. Entre guardias de hospital y la seguridad de un sueldo fijo, una amiga propuso una locura: abrir una escuela. Yo llevaba seis años trabajando de lunes a sábado en el sector salud, un ritmo que ya pesaba en el cuerpo.
+                            </p>
+                            <p class="border-l-4 border-[#BBA182] pl-6 italic text-gray-500">
+                                "Maka no nació como un plan de negocios perfecto. Nació como una respuesta a la ansiedad, a la crisis y al deseo de encontrar un lugar donde practicar no significara dejar de ser humana."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7 mt-12 md:mt-32">
+                        <h3 class="font-serif text-4xl text-[#BBA182] mb-6">La Resiliencia</h3>
+                        <div class="prose prose-lg text-oaxaca-text font-light leading-relaxed text-justify">
+                            <p class="mb-6">
+                                La pandemia nos silenció. Tuvimos que dejar nuestro primer local; no podíamos poner en riesgo la salud de nadie. Mi socia tomó otro camino y me quedé sola, sin el trabajo del hospital y con el estudio cerrado.
+                            </p>
+                            <p>
+                                Fue ahí, en la incertidumbre, donde Maka encontró su verdadera fuerza. Nos mudamos a lo digital, nos aferramos a la práctica y aprendimos que <strong>el espacio no son las paredes, sino la red humana que lo sostiene.</strong> Hoy, Maka crece desde la resiliencia, ofreciendo prácticas seguras, accesibles y profundamente éticas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. SECCIÓN: VALORES -->
+                 <div class="mb-32 pt-10 border-t border-oaxaca-wood/10">
+                    <div class="text-center mb-16">
+                        <h2 class="font-sans font-light text-5xl md:text-6xl text-oaxaca-wood mt-4">Nuestros Valores</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Valor 1 -->
+                        <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
+                            <i class="fas fa-heart text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Cuidado antes que rendimiento</h3>
+                        </div>
+                        <!-- Valor 2 -->
+                        <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
+                            <i class="fas fa-microscope text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Ciencia y experiencia dialogando</h3>
+                        </div>
+                        <!-- Valor 3 -->
+                        <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
+                            <i class="fas fa-users text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Accesibilidad y conciencia social</h3>
+                        </div>
+                        <!-- Valor 4 -->
+                        <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
+                            <i class="fas fa-fingerprint text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Respeto a los procesos individuales</h3>
+                        </div>
+                        <!-- Valor 5 -->
+                        <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
+                            <i class="fas fa-hands-holding-circle text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Comunidad antes que competencia</h3>
+                        </div>
+                        <!-- Valor 6 -->
+                        <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
+                            <i class="fas fa-balance-scale text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Coherencia entre lo que enseñamos y cómo trabajamos</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manifesto Section -->
+                <div class="mt-32 relative -mx-6 md:-mx-12 lg:-mx-24 shadow-2xl">
+                    <div class="bg-[#BBA182] py-24 px-6 md:px-24 text-white">
+                         <div class="max-w-4xl mb-16">
+                            <h2 class="font-serif text-5xl md:text-6xl mb-6">Manifiesto Ético</h2>
+                        </div>
+                        <!-- Manifesto items -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                            <div class="group"><span class="text-5xl font-serif opacity-40">01.</span><h4 class="text-xl font-bold mt-2 mb-3">Propósito Claro</h4><p class="text-sm opacity-80">Somos una respuesta al racismo, clasismo y la gentrificación.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">02.</span><h4 class="text-xl font-bold mt-2 mb-3">Accesibilidad Radical</h4><p class="text-sm opacity-80">El yoga no debe ser un lujo. Es un derecho al bienestar.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">03.</span><h4 class="text-xl font-bold mt-2 mb-3">Raíces Honradas</h4><p class="text-sm opacity-80">Reconocemos el linaje del yoga y lo adaptamos sin apropiarnos.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">04.</span><h4 class="text-xl font-bold mt-2 mb-3">Espacios Seguros</h4><p class="text-sm opacity-80">Creamos contenedores libres de juicio y competencia.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">05.</span><h4 class="text-xl font-bold mt-2 mb-3">Economía Solidaria</h4><p class="text-sm opacity-80">Nuestras ganancias se reinvierten en la comunidad.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">06.</span><h4 class="text-xl font-bold mt-2 mb-3">Bienestar Colectivo</h4><p class="text-sm opacity-80">Mi salud está ligada a la tuya. Nos cuidamos entre todes.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">07.</span><h4 class="text-xl font-bold mt-2 mb-3">Aprendizaje Continuo</h4><p class="text-sm opacity-80">Somos estudiantes eternos. Siempre hay algo nuevo que descubrir.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">08.</span><h4 class="text-xl font-bold mt-2 mb-3">Alegría Rebelde</h4><p class="text-sm opacity-80">En tiempos difíciles, el gozo es nuestra mayor resistencia.</p></div>
+                            
+                            <!-- Summary Block -->
+                            <div class="group border-2 border-white/30 p-6 rounded-lg bg-white/5 md:col-span-2 lg:col-span-1">
+                                <span class="text-5xl font-serif opacity-100">Maka</span>
+                                <h4 class="text-xl font-bold mt-2 mb-3">No busca llenar, busca resonar.</h4>
+                                <p class="text-sm leading-relaxed font-light">No atraemos por imagen. El reto es crear grupos desde lo profundo, no desde el marketing.</p>
+                            </div>
+                        </div>
+                         <div class="mt-16 text-center">
+                            <button data-link="contact" class="bg-white text-[#BBA182] px-10 py-4 rounded-full hover:bg-oaxaca-cream transition duration-300 font-bold text-xl shadow-lg">
+                                Únete a nosotros
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: NOSOTRAS (TEAM) ================= -->
+    <div id="page-team" class="hidden pt-24 min-h-screen bg-white">
+        <section class="py-12 md:py-20 px-4 md:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-12">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                        &larr; Volver al inicio
+                    </button>
+                </div>
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4 mb-8">Nuestras Guías</h2>
+                </div>
+
+                <div id="instructors-container" class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center max-w-2xl mx-auto">
+                    <!-- Instructors will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: INSTRUCTOR ================= -->
+    <div id="page-instructor" class="hidden pt-24 min-h-screen bg-[#F6E0B5]">
+        <section class="py-12 md:py-20 px-6 md:px-12 min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="mb-10">
+                    <button data-link="team" class="text-oaxaca-wood/60 hover:text-oaxaca-clay font-medium transition duration-300 flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i> Volver a Nosotras
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl bg-oaxaca-cream/20 p-2">
+                             <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
+                                <img id="instructor-img" src="" alt="" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-oaxaca-wood/5 mix-blend-multiply"></div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 flex flex-col justify-center h-full pt-4">
+                        <span id="instructor-style" class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-sm mb-4"></span>
+                        <h2 id="instructor-name" class="font-serif text-5xl md:text-7xl text-oaxaca-wood mb-8 leading-none"></h2>
+                        <div class="prose prose-lg text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
+                            <p id="instructor-bio"></p>
+                        </div>
+                        <div class="bg-white/40 p-8 rounded-xl border-l-4 border-oaxaca-clay mb-10">
+                            <i class="fas fa-quote-left text-oaxaca-clay/30 text-3xl mb-4 block"></i>
+                            <p id="instructor-quote" class="font-serif text-2xl text-oaxaca-wood italic mb-4"></p>
+                        </div>
+                        <div class="mb-12">
+                            <h4 class="font-bold text-oaxaca-wood text-lg mb-3">En sus clases encontrarás:</h4>
+                            <p id="instructor-class-desc" class="text-oaxaca-text/90 font-light"></p>
+                        </div>
+                        <div>
+                            <a id="instructor-whatsapp" href="#" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                                Preguntar sobre esta clase
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: CONTACTO ================= -->
+    <div id="page-contact" class="hidden pt-24 min-h-screen bg-white">
+        <section class="py-12 md:py-20 px-6 md:px-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-12">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                        &larr; Volver al inicio
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                         <h2 class="font-sans font-light text-5xl md:text-7xl text-oaxaca-wood mb-8 leading-tight">
+                            Estamos aquí <br> <span class="font-serif italic font-bold">para ti.</span>
+                        </h2>
+                        <!-- Contact Details -->
+                        <div class="space-y-8">
+                            <!-- Dirección -->
+                            <div class="flex items-start group">
+                                <div class="w-12 h-12 rounded-full bg-oaxaca-cream flex items-center justify-center text-oaxaca-clay text-xl mr-6 group-hover:bg-oaxaca-clay group-hover:text-white transition duration-300">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1">Visítanos</h4>
+                                    <p class="text-oaxaca-text/80">Calle Macedonio Alcalá 123<br>Centro Histórico, Oaxaca de Juárez</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start group">
+                                <div class="w-12 h-12 rounded-full bg-oaxaca-cream flex items-center justify-center text-oaxaca-clay text-xl mr-6 group-hover:bg-oaxaca-clay group-hover:text-white transition duration-300">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1">Escríbenos</h4>
+                                    <a href="mailto:hola@makayoga.mx" class="text-oaxaca-text/80 hover:text-oaxaca-clay transition">hola@makayoga.mx</a>
+                                </div>
+                            </div>
+
+                            <!-- Redes -->
+                            <div class="flex items-start group">
+                                <div class="w-12 h-12 rounded-full bg-oaxaca-cream flex items-center justify-center text-oaxaca-clay text-xl mr-6 group-hover:bg-oaxaca-clay group-hover:text-white transition duration-300">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-3">Conecta</h4>
+                                    <div class="flex space-x-6">
+                                        <a href="https://wa.me/529511234567" target="_blank" class="text-oaxaca-text/60 hover:text-green-500 text-3xl transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="#" target="_blank" class="text-oaxaca-text/60 hover:text-pink-500 text-3xl transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" target="_blank" class="text-oaxaca-text/60 hover:text-blue-500 text-3xl transition transform hover:scale-110"><i class="fab fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-[600px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Entrada acogedora Maka Yoga" 
+                             class="w-full h-full object-cover hover:scale-105 transition duration-1000">
+                        <div class="absolute inset-0 bg-oaxaca-wood/10"></div>
+                        
+                        <!-- Tarjeta flotante -->
+                        <div class="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-xl border border-white/50 shadow-lg">
+                            <p class="font-serif text-oaxaca-wood italic text-lg text-center">"Hacer comunidad comienza con un simple 'hola'."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: HORARIOS ================= -->
+    <div id="page-schedule" class="hidden pt-24 min-h-screen bg-white">
+        <section class="py-12 md:py-20 px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-12">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                        &larr; Volver al inicio
+                    </button>
+                </div>
+                <div class="text-center mb-16">
+                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4">Nuestros Horarios</h2>
+                </div>
+                <div class="overflow-x-auto rounded-lg shadow-lg">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-[#876848] text-white">
+                                <th class="p-4 font-serif text-xl font-normal">Hora</th>
+                                <th class="p-4 font-serif text-xl font-normal">Lunes</th>
+                                <th class="p-4 font-serif text-xl font-normal">Martes</th>
+                                <th class="p-4 font-serif text-xl font-normal">Miércoles</th>
+                                <th class="p-4 font-serif text-xl font-normal">Jueves</th>
+                                <th class="p-4 font-serif text-xl font-normal">Viernes</th>
+                                <th class="p-4 font-serif text-xl font-normal">Sábado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[#876848]">
+                             <!-- Fila 1 -->
+                            <tr class="bg-[#F6E0B5] border-b border-white/20">
+                                <td class="p-4 font-bold opacity-80">7:00 am</td>
+                                <td class="p-4">Vinyasa Flow</td>
+                                <td class="p-4">Hatha Suave</td>
+                                <td class="p-4">Vinyasa Flow</td>
+                                <td class="p-4">Hatha Suave</td>
+                                <td class="p-4">Vinyasa Flow</td>
+                                <td class="p-4 text-center text-sm opacity-50">-</td>
+                            </tr>
+                            <!-- Fila 2 -->
+                            <tr class="bg-[#F6E0B5] border-b border-white/20">
+                                <td class="p-4 font-bold opacity-80">9:00 am</td>
+                                <td class="p-4">Hatha Yoga</td>
+                                <td class="p-4">Restaurativo</td>
+                                <td class="p-4">Hatha Yoga</td>
+                                <td class="p-4">Restaurativo</td>
+                                <td class="p-4">Hatha Yoga</td>
+                                <td class="p-4">Clase Comunidad</td>
+                            </tr>
+                            <!-- Fila 3 -->
+                            <tr class="bg-[#F6E0B5] border-b border-white/20">
+                                <td class="p-4 font-bold opacity-80">6:00 pm</td>
+                                <td class="p-4">Yin Yoga</td>
+                                <td class="p-4">Meditación</td>
+                                <td class="p-4">Yin Yoga</td>
+                                <td class="p-4">Meditación</td>
+                                <td class="p-4">Relajación Sonora</td>
+                                <td class="p-4 text-center text-sm opacity-50">-</td>
+                            </tr>
+                            <!-- Fila 4 -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80">7:30 pm</td>
+                                <td class="p-4">Ashtanga Intro</td>
+                                <td class="p-4">Vinyasa Suave</td>
+                                <td class="p-4">Ashtanga Intro</td>
+                                <td class="p-4">Vinyasa Suave</td>
+                                <td class="p-4 text-center text-sm opacity-50">-</td>
+                                <td class="p-4 text-center text-sm opacity-50">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: ESPACIO ================= -->
+    <div id="page-space" class="hidden pt-24 min-h-screen bg-white">
+        <section id="galeria" class="py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-5xl text-oaxaca-wood mb-4">Nuestro Espacio</h2>
+                     <button data-link="home" class="mt-6 text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                        &larr; Volver al inicio
+                    </button>
+                </div>
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                    
+                    <!-- Imagen 1 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/1.jpg" alt="Patio y jardín" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Patio y jardín</p>
+                    </div>
+
+                    <!-- Imagen 2 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/2.jpg" alt="Práctica de asanas" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Práctica de asanas</p>
+                    </div>
+
+                    <!-- Imagen 3 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/3.jpg" alt="Yoga restaurativo" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Yoga restaurativo</p>
+                    </div>
+
+                    <!-- Imagen 4 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/4.jpg" alt="Inversiones y fuerza" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Inversiones y fuerza</p>
+                    </div>
+
+                    <!-- Imagen 5 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/5.jpg" alt="Estiramiento al sol" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Estiramiento al sol</p>
+                    </div>
+
+                    <!-- Imagen 6 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/6.jpg" alt="Mensajes intencionales" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Mensajes intencionales</p>
+                    </div>
+
+                    <!-- Imagen 7 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/7.jpg" alt="Clase grupal" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Clase grupal</p>
+                    </div>
+
+                    <!-- Imagen 8 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/8.jpg" alt="Detalles con alma" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Detalles con alma</p>
+                    </div>
+
+                    <!-- Imagen 9 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/9.jpg" alt="Conexión exterior" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Conexión exterior</p>
+                    </div>
+
+                    <!-- Imagen 10 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/10.jpg" alt="Gesto e introspección" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Gesto e introspección</p>
+                    </div>
+
+                    <!-- Imagen 11 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/11.jpg" alt="Un refugio sencillo" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Un refugio sencillo</p>
+                    </div>
+
+                    <!-- Imagen 12 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/12.jpg" alt="Rincón espiritual" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Rincón espiritual</p>
+                    </div>
+
+                    <!-- Imagen 13 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/13.jpg" alt="Un refugio seguro" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Un refugio seguro</p>
+                    </div>
+
+                    <!-- Imagen 14 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/14.jpg" alt="Meditación y quietud" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Meditación y quietud</p>
+                    </div>
+
+                    <!-- Imagen 15 -->
+                    <div class="break-inside-avoid group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:-translate-y-2">
+                            <img src="assets/espacio/15.jpg" alt="Horarios flexibles" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
+                        </div>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Horarios flexibles</p>
+                    </div>
+                </div>
+                 <div class="mt-16 text-center">
+                    <button data-link="contact" class="bg-oaxaca-clay text-white px-10 py-4 rounded-full hover:bg-oaxaca-wood transition duration-300 font-bold text-xl shadow-lg">
+                        Reserva tu clase
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacto" class="relative text-oaxaca-cream py-12 px-6 mt-auto">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop" class="w-full h-full object-cover brightness-[0.35]">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto flex justify-center items-center text-sm font-bold">
+            <div class="opacity-90">
+                &copy; 2024 MAKA Yoga. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante -->
+    <a id="whatsapp-float" href="https://wa.me/529511234567" target="_blank" aria-label="Escríbenos por WhatsApp" 
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center animate-float hover:scale-110 transition-all duration-500 group opacity-0 pointer-events-none">
+        <i class="fab fa-whatsapp text-4xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-oaxaca-text px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            ¡Escríbenos!
+        </span>
+    </a>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center select-none backdrop-blur-sm">
+        <button class="absolute top-6 right-6 text-white/70 hover:text-white z-[110] transition p-2">
+            <i class="fas fa-times text-4xl"></i>
+        </button>
+        <button class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white z-[110] transition p-4 hidden md:block">
+            <i class="fas fa-chevron-left text-5xl"></i>
+        </button>
+        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white z-[110] transition p-4 hidden md:block">
+            <i class="fas fa-chevron-right text-5xl"></i>
+        </button>
+        <div class="relative max-w-[90vw] max-h-[85vh]">
+            <img id="lightbox-img" src="" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl transition-transform duration-300">
+            <p id="lightbox-caption" class="text-center text-white/90 font-serif text-2xl mt-4 tracking-wide"></p>
+        </div>
+    </div>
+</body>
+</html>
