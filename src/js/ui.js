@@ -2,6 +2,9 @@ import { navigateTo } from './router.js';
 import { instructorsData } from './data.js';
 import { languageManager } from './i18n/languageManager.js';
 
+// Track currently open instructor for language switching
+let currentInstructorKey = null;
+
 export function initUI() {
     initMobileMenu();
     initHeroCarousel();
@@ -13,10 +16,10 @@ export function initUI() {
     initInstructors();
     
     // Listen for language changes
-    // Listen for language changes
     document.addEventListener('languageChanged', () => {
         initRandomInstructors();
         initInstructors(); // Re-attach event listeners after DOM update
+        updateInstructorContent(); // Update instructor page if currently open
     });
 }
 
@@ -240,6 +243,9 @@ function openInstructor(key) {
     const data = instructorsData[key];
     if (!data) return;
 
+    // Store current instructor key for language switching
+    currentInstructorKey = key;
+
     const lang = languageManager.getCurrentLang();
     
     document.getElementById('instructor-name').textContent = data.name;
@@ -273,6 +279,24 @@ function openInstructor(key) {
     document.getElementById('instructor-whatsapp').href = whatsappUrl;
 
     navigateTo('instructor');
+}
+
+// Update instructor content when language changes (if instructor page is open)
+function updateInstructorContent() {
+    if (!currentInstructorKey) return;
+    
+    const instructorPage = document.getElementById('page-instructor');
+    if (!instructorPage || instructorPage.classList.contains('hidden')) return;
+    
+    const data = instructorsData[currentInstructorKey];
+    if (!data) return;
+    
+    const lang = languageManager.getCurrentLang();
+    
+    document.getElementById('instructor-style').textContent = lang === 'en' ? (data.style_en || data.style) : data.style;
+    document.getElementById('instructor-bio').innerHTML = lang === 'en' ? (data.bio_en || data.bio) : data.bio;
+    document.getElementById('instructor-quote').innerHTML = `"${lang === 'en' ? (data.quote_en || data.quote) : data.quote}"`;
+    document.getElementById('instructor-class-desc').innerHTML = lang === 'en' ? (data.classDesc_en || data.classDesc) : data.classDesc;
 }
 
 function initLightbox() {

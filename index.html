@@ -37,7 +37,7 @@
                     <button data-link="schedule" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_schedule">Horarios</button>
                     <button data-link="space" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_space">Espacio</button>
                     <button data-link="contact" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_contact">Contacto</button>
-                    <button id="lang-toggle-desktop" class="text-oaxaca-wood hover:text-oaxaca-clay font-bold border border-oaxaca-wood/30 rounded-full px-3 py-1 text-sm bg-white/50 transition duration-300" onclick="import('./src/js/i18n/languageManager.js').then(m => m.languageManager.toggleLanguage())">EN</button>
+                    <button id="lang-toggle-desktop" class="text-oaxaca-wood hover:text-oaxaca-clay font-bold border border-oaxaca-wood/30 rounded-full px-3 py-1 text-sm bg-white/50 transition duration-300" onclick="window.languageManager.toggleLanguage()">EN</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -57,7 +57,7 @@
                 <button data-link="schedule" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_schedule">Horarios</button>
                 <button data-link="space" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_space">Espacio</button>
                 <button data-link="contact" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_contact">Contacto</button>
-                <button id="lang-toggle-mobile" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-bold uppercase" onclick="import('./src/js/i18n/languageManager.js').then(m => m.languageManager.toggleLanguage())">EN</button>
+                <button id="lang-toggle-mobile" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-bold uppercase" onclick="window.languageManager.toggleLanguage()">EN</button>
             </div>
         </div>
     </nav>
@@ -535,7 +535,7 @@
             <div class="max-w-7xl mx-auto w-full">
                 <div class="mb-10">
                     <button data-link="team" class="text-oaxaca-wood/60 hover:text-oaxaca-clay font-medium transition duration-300 flex items-center">
-                        <i class="fas fa-arrow-left mr-2"></i> Volver a Nosotras
+                        <i class="fas fa-arrow-left mr-2"></i> <span data-i18n="inst_back">Volver a Nosotras</span>
                     </button>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
@@ -591,23 +591,12 @@
                         <div class="space-y-8">
                             <!-- Dirección -->
                             <div class="flex items-start group">
-                                <div class="w-12 h-12 rounded-full bg-oaxaca-cream flex items-center justify-center text-oaxaca-clay text-xl mr-6 group-hover:bg-oaxaca-clay group-hover:text-white transition duration-300">
+                                <a href="https://maps.app.goo.gl/owdzdWNFYH81fMGR7" target="_blank" aria-label="Ver en Google Maps" class="w-12 h-12 rounded-full bg-oaxaca-cream flex items-center justify-center text-oaxaca-clay text-xl mr-6 group-hover:bg-oaxaca-clay group-hover:text-white transition duration-300 cursor-pointer">
                                     <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                </a>
                                 <div>
-                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1">Visítanos</h4>
+                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1" data-i18n="cont_visit_title">Visítanos</h4>
                                     <p class="text-oaxaca-text/80">Rufino Tamayo 917, Arquitos,<br>Barrio de Xochimilco, 68040 Oaxaca de Juárez, Oax.</p>
-                                </div>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="flex items-start group">
-                                <div class="w-12 h-12 rounded-full bg-oaxaca-cream flex items-center justify-center text-oaxaca-clay text-xl mr-6 group-hover:bg-oaxaca-clay group-hover:text-white transition duration-300">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1" data-i18n="cont_write_title">Escríbenos</h4>
-                                    <a href="mailto:hola@makayoga.mx" class="text-oaxaca-text/80 hover:text-oaxaca-clay transition">hola@makayoga.mx</a>
                                 </div>
                             </div>
 

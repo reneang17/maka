@@ -1,8 +1,8 @@
 export const instructorsData = {
     'maria': {
         name: 'María',
-        style: 'Vinyasa Flow',
-        style_en: 'Vinyasa Flow',
+        style: 'Hatha Yoga & Yin Yoga',
+        style_en: 'Hatha Yoga & Yin Yoga',
         image: 'assets/instructoras/Maria.jpeg',
         bio: 'Mi práctica de yoga se fundamenta en más de 10 años de experiencia y en una convicción clara: el bienestar y el descanso son derechos fundamentales, no privilegios exclusivos de unos pocos. Mi formación combina el Yoga tradicional (Hata, restaurativo) con enfoques contemporáneos basados en la ciencia, como la psicoendocrinología y la atención informada en trauma. Además, mis nueve años asistiendo en consultas de traumatología me dieron una comprensión profunda y real de la anatomía humana, permitiéndome ver más allá de las posturas estéticas para enfocarme en la funcionalidad, la movilidad articular y la salud del sistema nervioso. No busco que mis alumnos realicen acrobacias, sino que fortalezcan su cuerpo para la vida diaria y encuentren un espacio seguro para habitarse a sí mismos.<br><br>A lo largo de mi carrera, he tenido el privilegio de acompañar a una diversidad inmensa de personas, derribando la idea de que el yoga requiere un tipo de cuerpo, edad o estatus social específico. Actualmente, guío a alumnas que van desde los 18 hasta los 85 años, adaptando la práctica a cada necesidad. Mi labor docente me ha llevado desde impartir clases particulares y sesiones para personal de hotelería y servicio, hasta trabajar dentro de centros penitenciarios (femeninos y masculinos) y apoyar a madres autónomas. Entiendo la vulnerabilidad humana y la importancia de crear espacios donde no exista el juicio, sino la aceptación.<br><br>En mis clases, ofrezco una guía honesta y participativa. Trabajamos con respiración suave para regular el sistema nervioso y movimientos conscientes que respetan la biomecánica individual. Mi objetivo no es prometer soluciones mágicas, sino facilitar herramientas corporales y mentales que te permitan transitar tus propios procesos, gestionar el dolor o la ansiedad, y reclamar tu derecho a sentirte bien, descansar y vivir sin dolor, independientemente del contexto que te rodee.',
         bio_en: 'My yoga practice is grounded in over 10 years of experience and a clear conviction: well-being and rest are fundamental rights, not exclusive privileges. My background combines traditional Yoga (Hatha, restorative) with contemporary science-based approaches like psychoendocrinology and trauma-informed care. Additionally, my nine years assisting in trauma consultations gave me a deep and real understanding of human anatomy, allowing me to look beyond aesthetic postures to focus on functionality, joint mobility, and nervous system health. I don\'t seek for my students to perform acrobatics, but to strengthen their bodies for daily life and find a safe space to inhabit themselves.<br><br>Throughout my career, I have had the privilege of accompanying an immense diversity of people, breaking down the idea that yoga requires a specific body type, age, or social status. Currently, I guide students ranging from 18 to 85 years old, adapting the practice to each need. My teaching work has taken me from giving private classes and sessions for hotel and service staff, to working within prisons (female and male) and supporting single mothers. I understand human vulnerability and the importance of creating spaces where there is no judgment, only acceptance.<br><br>In my classes, I offer honest and participatory guidance. We work with soft breathing to regulate the nervous system and conscious movements that respect individual biomechanics. My goal is not to promise magic solutions, but to facilitate bodily and mental tools that allow you to navigate your own processes, manage pain or anxiety, and reclaim your right to feel good, rest, and live without pain, regardless of the context surrounding you.',
@@ -14,8 +14,8 @@ export const instructorsData = {
     },
     'alosja': {
         name: 'Alosja',
-        style: 'Hatha Tradicional',
-        style_en: 'Traditional Hatha',
+        style: 'Alineamiento Restaurativo',
+        style_en: 'Restorative Alignment',
         image: 'assets/instructoras/Alosja.jpg',
         bio: 'Con más de 10 años de práctica, me he dedicado a estudiar las raíces del yoga para compartirlas de manera accesible. Mi enfoque es la alineación y la permanencia en las posturas para cultivar paciencia y observación profunda.',
         bio_en: 'With over 10 years of practice, I have dedicated myself to studying the roots of yoga to share them in an accessible way. My focus is on alignment and holding postures to cultivate patience and deep observation.',
@@ -40,8 +40,8 @@ export const instructorsData = {
     },
     'karina': {
         name: 'Karina',
-        style: 'Ashtanga',
-        style_en: 'Ashtanga',
+        style: 'Hatha Yoga & Hatha Suave',
+        style_en: 'Hatha Yoga & Gentle Hatha',
         image: null,
         bio: 'La disciplina del Ashtanga me enseñó que la constancia transforma. Comparto esta práctica vigorosa con suavidad, enfocándome en la limpieza interna y el calor (tapas) como catalizadores de cambio.',
         bio_en: 'The discipline of Ashtanga taught me that consistency transforms. I share this vigorous practice with softness, focusing on internal cleansing and heat (tapas) as catalysts for change.',
@@ -53,8 +53,8 @@ export const instructorsData = {
     },
     'paty': {
         name: 'Paty',
-        style: 'Meditación',
-        style_en: 'Meditation',
+        style: 'Vinyasa',
+        style_en: 'Vinyasa',
         image: null,
         bio: 'Mi práctica se centra en el espacio entre pensamientos. Guío sesiones de meditación y mindfulness para cultivar una mente clara y un corazón abierto, integrando técnicas tradicionales con neurociencia moderna.',
         bio_en: 'My practice centers on the space between thoughts. I guide meditation and mindfulness sessions to cultivate a clear mind and an open heart, integrating traditional techniques with modern neuroscience.',
