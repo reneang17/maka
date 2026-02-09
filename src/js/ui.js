@@ -221,9 +221,9 @@ function openInstructor(key) {
 
     document.getElementById('instructor-name').textContent = data.name;
     document.getElementById('instructor-style').textContent = data.style;
-    document.getElementById('instructor-bio').textContent = data.bio;
-    document.getElementById('instructor-quote').textContent = `"${data.quote}"`;
-    document.getElementById('instructor-class-desc').textContent = data.classDesc;
+    document.getElementById('instructor-bio').innerHTML = data.bio;
+    document.getElementById('instructor-quote').innerHTML = `"${data.quote}"`;
+    document.getElementById('instructor-class-desc').innerHTML = data.classDesc;
     document.getElementById('instructor-img').src = data.image;
     document.getElementById('instructor-img').alt = data.name;
 

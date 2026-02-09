@@ -2,16 +2,16 @@ export const instructorsData = {
     'maria': {
         name: 'María',
         style: 'Vinyasa Flow',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop',
-        bio: 'Mi camino comenzó buscando fuerza física y terminó encontrando una fuerza interna que desconocía. En mis clases buscamos sincronizar la respiración con el movimiento para entrar en un estado de meditación activa. Creo firmemente que la flexibilidad mental es más importante que la física.',
-        quote: 'Sostener comunidad es respirar al mismo ritmo, sabiendo que en este espacio nadie se queda atrás y todos avanzamos juntos.',
-        classDesc: 'Secuencias fluidas y dinámicas donde exploramos el movimiento consciente, transiciones creativas y el fortalecimiento del cuerpo desde el respeto a sus límites actuales.',
+        image: 'assets/instructoras/María.jpeg',
+        bio: 'Mi práctica de yoga se fundamenta en más de 10 años de experiencia y en una convicción clara: el bienestar y el descanso son derechos fundamentales, no privilegios exclusivos de unos pocos. Mi formación combina el Yoga tradicional (Hata, restaurativo) con enfoques contemporáneos basados en la ciencia, como la psicoendocrinología y la atención informada en trauma. Además, mis nueve años asistiendo en consultas de traumatología me dieron una comprensión profunda y real de la anatomía humana, permitiéndome ver más allá de las posturas estéticas para enfocarme en la funcionalidad, la movilidad articular y la salud del sistema nervioso. No busco que mis alumnos realicen acrobacias, sino que fortalezcan su cuerpo para la vida diaria y encuentren un espacio seguro para habitarse a sí mismos.<br><br>A lo largo de mi carrera, he tenido el privilegio de acompañar a una diversidad inmensa de personas, derribando la idea de que el yoga requiere un tipo de cuerpo, edad o estatus social específico. Actualmente, guío a alumnas que van desde los 18 hasta los 85 años, adaptando la práctica a cada necesidad. Mi labor docente me ha llevado desde impartir clases particulares y sesiones para personal de hotelería y servicio, hasta trabajar dentro de centros penitenciarios (femeninos y masculinos) y apoyar a madres autónomas. Entiendo la vulnerabilidad humana y la importancia de crear espacios donde no exista el juicio, sino la aceptación.<br><br>En mis clases, ofrezco una guía honesta y participativa. Trabajamos con respiración suave para regular el sistema nervioso y movimientos conscientes que respetan la biomecánica individual. Mi objetivo no es prometer soluciones mágicas, sino facilitar herramientas corporales y mentales que te permitan transitar tus propios procesos, gestionar el dolor o la ansiedad, y reclamar tu derecho a sentirte bien, descansar y vivir sin dolor, independientemente del contexto que te rodee.',
+        quote: 'Que nuestra practica y comunidad se conviertan en<br>Un espacio abierto. Un refugio amoroso.<br>Un lugar para mover el cuerpo, respirar profundo, y hacer comunidad.<br>Una práctica compartida, para no seguir cargando solas lo que duele en común.',
+        classDesc: 'Un espacio seguro e inclusivo donde unimos yoga y ciencia para regular tu sistema nervioso y fortalecer tu cuerpo real, adaptándonos a tu edad y condición. Busco ofrecerte herramientas funcionales de movilidad, fortaleza y respiración para gestionar el estrés, aliviar tensiones y vivir sin dolor.',
         phone: '529513464383'
     },
     'alosja': {
         name: 'Alosja',
         style: 'Hatha Tradicional',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop',
+        image: 'assets/instructoras/Alosja.jpg',
         bio: 'Con más de 10 años de práctica, me he dedicado a estudiar las raíces del yoga para compartirlas de manera accesible. Mi enfoque es la alineación y la permanencia en las posturas para cultivar paciencia y observación profunda.',
         quote: 'La comunidad es el cimiento firme sobre el cual construimos nuestra práctica personal; es el recordatorio de que somos espejos los unos de los otros.',
         classDesc: 'Una práctica pausada y estructurada, enfocada en la alineación correcta, el uso de props para adaptar la postura al cuerpo y la integración de pranayama (respiración).',
