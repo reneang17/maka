@@ -524,15 +524,15 @@
                     <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4 mb-8" data-i18n="team_title">Nuestras Guías</h2>
                 </div>
 
-                <div id="instructors-container" class="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto">
+                <div id="instructors-container" class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
                     <!-- Instructors will be loaded here dynamically -->
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- ================= VISTA: INSTRUCTOR ================= -->
-    <div id="page-instructor" class="hidden pt-24 min-h-screen bg-[#F6E0B5]">
+    <!-- ================= VISTA: INSTRUCTOR - ALOSJA ================= -->
+    <div id="page-instructor-alosja" class="hidden pt-24 min-h-screen bg-[#F6E0B5]">
         <section class="py-12 md:py-20 px-6 md:px-12 min-h-screen flex items-center">
             <div class="max-w-7xl mx-auto w-full">
                 <div class="mb-10">
@@ -544,33 +544,167 @@
                     <div class="lg:col-span-5 flex justify-center lg:justify-end">
                         <div class="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl bg-oaxaca-cream/20 p-2">
                              <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
-                                <img id="instructor-img" src="" alt="" class="w-full h-full object-cover">
+                                <img src="assets/instructoras/Alosja.jpg" alt="Alosja" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-oaxaca-wood/5 mix-blend-multiply"></div>
                              </div>
                         </div>
                     </div>
                     <div class="lg:col-span-7 flex flex-col justify-center h-full pt-4">
-                        <span id="instructor-style" class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-base mb-4"></span>
-                        <h2 id="instructor-name" class="font-serif text-6xl md:text-8xl text-oaxaca-wood mb-8 leading-none"></h2>
+                        <span class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-base mb-4" data-i18n="inst_alosja_style">Alineamiento Restaurativo</span>
+                        <h2 class="font-serif text-6xl md:text-8xl text-oaxaca-wood mb-8 leading-none">Alosja</h2>
                         <div class="prose prose-xl text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
-                            <p id="instructor-bio"></p>
+                            <p data-i18n="inst_alosja_bio">Con más de 10 años de práctica, me he dedicado a estudiar las raíces del yoga para compartirlas de manera accesible. Mi enfoque es la alineación y la permanencia en las posturas para cultivar paciencia y observación profunda.</p>
                         </div>
                         <div class="bg-white/40 p-8 rounded-xl border-l-4 border-oaxaca-clay mb-10">
                             <i class="fas fa-quote-left text-oaxaca-clay/30 text-3xl mb-4 block"></i>
-                            <p id="instructor-quote" class="font-serif text-3xl text-oaxaca-wood italic mb-4"></p>
+                            <p class="font-serif text-3xl text-oaxaca-wood italic mb-4" data-i18n="inst_alosja_quote">La comunidad es el cimiento firme sobre el cual construimos nuestra práctica personal; es el recordatorio de que somos espejos los unos de los otros.</p>
                         </div>
                         <div class="mb-12">
                             <h4 class="font-bold text-oaxaca-wood text-xl mb-3" data-i18n="inst_class_label">En sus clases encontrarás:</h4>
-                            <p id="instructor-class-desc" class="text-oaxaca-text/90 text-xl font-light"></p>
+                            <p class="text-oaxaca-text/90 text-xl font-light" data-i18n="inst_alosja_class_desc">Una práctica pausada y estructurada, enfocada en la alineación correcta, el uso de props para adaptar la postura al cuerpo y la integración de pranayama (respiración).</p>
                         </div>
                         <div>
-                            <a id="instructor-whatsapp" href="#" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
+                            <a href="https://wa.me/529513464383?text=Hola%2C%20me%20interesa%20preguntar%20sobre%20las%20clases%20con%20Alosja" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
                                 <i class="fab fa-whatsapp mr-3 text-xl"></i>
                                 <span data-i18n="inst_ask_btn">Preguntar sobre esta clase</span>
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- Custom sections for Alosja can be added here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: INSTRUCTOR - MARIA ================= -->
+    <div id="page-instructor-maria" class="hidden pt-24 min-h-screen bg-[#F6E0B5]">
+        <section class="py-12 md:py-20 px-6 md:px-12 min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="mb-10">
+                    <button data-link="team" class="text-oaxaca-wood/60 hover:text-oaxaca-clay font-medium transition duration-300 flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i> <span data-i18n="inst_back">Volver a Nosotras</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl bg-oaxaca-cream/20 p-2">
+                             <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
+                                <img src="assets/instructoras/Maria.jpeg" alt="María" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-oaxaca-wood/5 mix-blend-multiply"></div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 flex flex-col justify-center h-full pt-4">
+                        <span class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-base mb-4" data-i18n="inst_maria_style">Hatha Yoga & Yin Yoga</span>
+                        <h2 class="font-serif text-6xl md:text-8xl text-oaxaca-wood mb-8 leading-none">María</h2>
+                        <div class="prose prose-xl text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
+                            <p data-i18n="inst_maria_bio">Mi práctica de yoga se fundamenta en más de 10 años de experiencia y en una convicción clara: el bienestar y el descanso son derechos fundamentales, no privilegios exclusivos de unos pocos. Mi formación combina el Yoga tradicional (Hata, restaurativo) con enfoques contemporáneos basados en la ciencia, como la psicoendocrinología y la atención informada en trauma. Además, mis nueve años asistiendo en consultas de traumatología me dieron una comprensión profunda y real de la anatomía humana, permitiéndome ver más allá de las posturas estéticas para enfocarme en la funcionalidad, la movilidad articular y la salud del sistema nervioso. No busco que mis alumnos realicen acrobacias, sino que fortalezcan su cuerpo para la vida diaria y encuentren un espacio seguro para habitarse a sí mismos.<br><br>A lo largo de mi carrera, he tenido el privilegio de acompañar a una diversidad inmensa de personas, derribando la idea de que el yoga requiere un tipo de cuerpo, edad o estatus social específico. Actualmente, guío a alumnas que van desde los 18 hasta los 85 años, adaptando la práctica a cada necesidad. Mi labor docente me ha llevado desde impartir clases particulares y sesiones para personal de hotelería y servicio, hasta trabajar dentro de centros penitenciarios (femeninos y masculinos) y apoyar a madres autónomas. Entiendo la vulnerabilidad humana y la importancia de crear espacios donde no exista el juicio, sino la aceptación.<br><br>En mis clases, ofrezco una guía honesta y participativa. Trabajamos con respiración suave para regular el sistema nervioso y movimientos conscientes que respetan la biomecánica individual. Mi objetivo no es prometer soluciones mágicas, sino facilitar herramientas corporales y mentales que te permitan transitar tus propios procesos, gestionar el dolor o la ansiedad, y reclamar tu derecho a sentirte bien, descansar y vivir sin dolor, independientemente del contexto que te rodee.</p>
+                        </div>
+                        <div class="bg-white/40 p-8 rounded-xl border-l-4 border-oaxaca-clay mb-10">
+                            <i class="fas fa-quote-left text-oaxaca-clay/30 text-3xl mb-4 block"></i>
+                            <p class="font-serif text-3xl text-oaxaca-wood italic mb-4" data-i18n="inst_maria_quote">Que nuestra practica y comunidad se conviertan en<br>Un espacio abierto. Un refugio amoroso.<br>Un lugar para mover el cuerpo, respirar profundo, y hacer comunidad.<br>Una práctica compartida, para no seguir cargando solas lo que duele en común.</p>
+                        </div>
+                        <div class="mb-12">
+                            <h4 class="font-bold text-oaxaca-wood text-xl mb-3" data-i18n="inst_class_label">En sus clases encontrarás:</h4>
+                            <p class="text-oaxaca-text/90 text-xl font-light" data-i18n="inst_maria_class_desc">Un espacio seguro e inclusivo donde unimos yoga y ciencia para regular tu sistema nervioso y fortalecer tu cuerpo real, adaptándonos a tu edad y condición. Busco ofrecerte herramientas funcionales de movilidad, fortaleza y respiración para gestionar el estrés, aliviar tensiones y vivir sin dolor.</p>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/529513464383?text=Hola%2C%20me%20interesa%20preguntar%20sobre%20las%20clases%20con%20Mar%C3%ADa" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                                <span data-i18n="inst_ask_btn">Preguntar sobre esta clase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Custom sections for María can be added here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: INSTRUCTOR - KARINA ================= -->
+    <div id="page-instructor-karina" class="hidden pt-24 min-h-screen bg-[#F6E0B5]">
+        <section class="py-12 md:py-20 px-6 md:px-12 min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="mb-10">
+                    <button data-link="team" class="text-oaxaca-wood/60 hover:text-oaxaca-clay font-medium transition duration-300 flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i> <span data-i18n="inst_back">Volver a Nosotras</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl bg-oaxaca-cream/20 p-2 flex items-center justify-center">
+                             <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-oaxaca-wood/10 flex items-center justify-center">
+                                <i class="fas fa-user text-oaxaca-wood/30 text-8xl"></i>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 flex flex-col justify-center h-full pt-4">
+                        <span class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-base mb-4" data-i18n="inst_karina_style">Hatha Yoga & Hatha Suave</span>
+                        <h2 class="font-serif text-6xl md:text-8xl text-oaxaca-wood mb-8 leading-none">Karina</h2>
+                        <div class="prose prose-xl text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
+                            <p data-i18n="inst_karina_bio">La disciplina del Ashtanga me enseñó que la constancia transforma. Comparto esta práctica vigorosa con suavidad, enfocándome en la limpieza interna y el calor (tapas) como catalizadores de cambio.</p>
+                        </div>
+                        <div class="bg-white/40 p-8 rounded-xl border-l-4 border-oaxaca-clay mb-10">
+                            <i class="fas fa-quote-left text-oaxaca-clay/30 text-3xl mb-4 block"></i>
+                            <p class="font-serif text-3xl text-oaxaca-wood italic mb-4" data-i18n="inst_karina_quote">La disciplina no es rigidez, es el fuego que compartimos para mantenernos cálidos. Sostener comunidad es motivarnos a volver al tapete día tras día.</p>
+                        </div>
+                        <div class="mb-12">
+                            <h4 class="font-bold text-oaxaca-wood text-xl mb-3" data-i18n="inst_class_label">En sus clases encontrarás:</h4>
+                            <p class="text-oaxaca-text/90 text-xl font-light" data-i18n="inst_karina_class_desc">Serie dinámica y vigorosa que sigue una secuencia específica de posturas, enfocándose en la respiración Ujjayi, puntos de mirada (Drishti) y cierres energéticos (Bandhas).</p>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/529513464383?text=Hola%2C%20me%20interesa%20preguntar%20sobre%20las%20clases%20con%20Karina" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                                <span data-i18n="inst_ask_btn">Preguntar sobre esta clase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Custom sections for Karina can be added here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VISTA: INSTRUCTOR - PHAN ================= -->
+    <div id="page-instructor-phan" class="hidden pt-24 min-h-screen bg-[#F6E0B5]">
+        <section class="py-12 md:py-20 px-6 md:px-12 min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="mb-10">
+                    <button data-link="team" class="text-oaxaca-wood/60 hover:text-oaxaca-clay font-medium transition duration-300 flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i> <span data-i18n="inst_back">Volver a Nosotras</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl bg-oaxaca-cream/20 p-2 flex items-center justify-center">
+                             <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-oaxaca-wood/10 flex items-center justify-center">
+                                <i class="fas fa-user text-oaxaca-wood/30 text-8xl"></i>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 flex flex-col justify-center h-full pt-4">
+                        <span class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-base mb-4" data-i18n="inst_phan_style">Vinyasa somática</span>
+                        <h2 class="font-serif text-6xl md:text-8xl text-oaxaca-wood mb-8 leading-none">Phan</h2>
+                        <div class="prose prose-xl text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
+                            <p data-i18n="inst_phan_bio">Descubrí el yoga restaurativo como una herramienta de sanación profunda para el sistema nervioso. Mi misión es crear espacios de descanso radical en un mundo que glorifica la prisa constante.</p>
+                        </div>
+                        <div class="bg-white/40 p-8 rounded-xl border-l-4 border-oaxaca-clay mb-10">
+                            <i class="fas fa-quote-left text-oaxaca-clay/30 text-3xl mb-4 block"></i>
+                            <p class="font-serif text-3xl text-oaxaca-wood italic mb-4" data-i18n="inst_phan_quote">En el descanso compartido encontramos la fuerza para sostenernos mutuamente. Sostener comunidad es permitirnos ser vulnerables y descansar juntos.</p>
+                        </div>
+                        <div class="mb-12">
+                            <h4 class="font-bold text-oaxaca-wood text-xl mb-3" data-i18n="inst_class_label">En sus clases encontrarás:</h4>
+                            <p class="text-oaxaca-text/90 text-xl font-light" data-i18n="inst_phan_class_desc">Posturas sostenidas por largos periodos con el apoyo total de props (cojines, mantas, bloques) para inducir una relajación profunda y restaurar la energía vital.</p>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/529513464383?text=Hola%2C%20me%20interesa%20preguntar%20sobre%20las%20clases%20con%20Phan" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
+                                <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                                <span data-i18n="inst_ask_btn">Preguntar sobre esta clase</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Custom sections for Phan can be added here -->
             </div>
         </section>
     </div>
@@ -646,6 +780,27 @@
                 <div class="text-center mb-16">
                     <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4" data-i18n="sched_page_title">Nuestros Horarios</h2>
                 </div>
+                
+                <!-- Availability Notice -->
+                <div class="bg-oaxaca-clay/10 border border-oaxaca-clay/30 rounded-2xl p-6 mb-10 text-center max-w-2xl mx-auto">
+                    <p class="text-oaxaca-wood text-lg mb-4" data-i18n="sched_notice">
+                        <i class="fas fa-info-circle mr-2"></i>Para cuidar tu tiempo, te pedimos por favor contactarnos para darte horarios actualizados.
+                    </p>
+                    <a href="https://wa.me/529513464383?text=Hola%2C%20quisiera%20saber%20los%20horarios%20actualizados%20de%20las%20clases" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-600 text-white hover:bg-green-700 transition duration-300 rounded-full font-semibold text-lg">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                        <span data-i18n="sched_ask_availability">Preguntar por disponibilidad</span>
+                    </a>
+                    
+                    <!-- Phan reservation notice -->
+                    <p class="text-oaxaca-wood/80 text-base mt-6 mb-3" data-i18n="sched_phan_notice">
+                        Los horarios de la instructora Phan son únicamente por reservación.
+                    </p>
+                    <a href="https://wa.me/529513464383?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20clase%20con%20Phan" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-600 text-white hover:bg-green-700 transition duration-300 rounded-full font-semibold text-lg">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                        <span data-i18n="sched_book_phan">Agendar clase con Phan</span>
+                    </a>
+                </div>
+                
                 <div class="overflow-x-auto rounded-lg shadow-lg">
                     <table class="w-full text-left border-collapse border border-[#876848]/40">
                         <thead>
@@ -697,11 +852,11 @@
                             <!-- 10:00 AM -->
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">10:00 am</td>
-                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha_gentle">Hatha Yoga suave</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="phan"><span class="text-lg font-medium" data-i18n="cls_vinyasa_som">Vinyasa somática</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Phan</span></td>
-                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha_gentle">Hatha Yoga suave</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="phan"><span class="text-lg font-medium" data-i18n="cls_vinyasa_som">Vinyasa somática</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Phan</span></td>
-                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha_gentle">Hatha Yoga suave</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
@@ -719,11 +874,11 @@
                             <!-- 5:00 PM -->
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">5:00 pm</td>
-                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="paty"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Paty</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="paty"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Paty</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="paty"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Paty</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
@@ -777,6 +932,32 @@
         <div class="w-full h-full overflow-auto flex items-start justify-center py-12">
             <div id="schedule-lightbox-content" class="bg-white rounded-lg shadow-2xl overflow-auto max-w-full">
                 <!-- Table will be cloned here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Class Options Modal -->
+    <div id="class-options-modal" class="fixed inset-0 bg-black/70 z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+            <button id="class-options-close" class="absolute top-4 right-4 text-oaxaca-text/50 hover:text-oaxaca-clay text-2xl transition" aria-label="Cerrar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 rounded-full bg-oaxaca-clay/10 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-yoga text-oaxaca-clay text-2xl"></i>
+                </div>
+                <h3 id="class-options-title" class="font-serif text-2xl text-oaxaca-wood"></h3>
+                <p id="class-options-instructor" class="text-oaxaca-text/70 mt-2"></p>
+            </div>
+            <div class="space-y-4">
+                <button id="class-options-profile" class="w-full flex items-center justify-center px-6 py-4 bg-oaxaca-wood text-white hover:bg-oaxaca-clay transition duration-300 rounded-full font-semibold text-lg">
+                    <i class="fas fa-user mr-3"></i>
+                    <span data-i18n="class_view_profile">Ver perfil de la guía</span>
+                </button>
+                <a id="class-options-whatsapp" href="#" target="_blank" class="w-full flex items-center justify-center px-6 py-4 border-2 border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-white transition duration-300 rounded-full font-semibold text-lg">
+                    <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                    <span data-i18n="class_ask_availability">Preguntar por disponibilidad</span>
+                </a>
             </div>
         </div>
     </div>

@@ -50,18 +50,5 @@ export const instructorsData = {
         classDesc: 'Serie dinámica y vigorosa que sigue una secuencia específica de posturas, enfocándose en la respiración Ujjayi, puntos de mirada (Drishti) y cierres energéticos (Bandhas).',
         classDesc_en: 'Dynamic and vigorous series that follows a specific sequence of postures, focusing on Ujjayi breathing, gaze points (Drishti), and energetic locks (Bandhas).',
         phone: '529513464383'
-    },
-    'paty': {
-        name: 'Paty',
-        style: 'Vinyasa',
-        style_en: 'Vinyasa',
-        image: null,
-        bio: 'Mi práctica se centra en el espacio entre pensamientos. Guío sesiones de meditación y mindfulness para cultivar una mente clara y un corazón abierto, integrando técnicas tradicionales con neurociencia moderna.',
-        bio_en: 'My practice centers on the space between thoughts. I guide meditation and mindfulness sessions to cultivate a clear mind and an open heart, integrating traditional techniques with modern neuroscience.',
-        quote: 'El silencio compartido es la forma más honesta de decir "estoy contigo". Sostener comunidad es escucharnos más allá de las palabras.',
-        quote_en: 'Shared silence is the most honest way to say "I am with you". Holding community is listening to each other beyond words.',
-        classDesc: 'Sesiones guiadas de atención plena, escaneo corporal y cultivo de la compasión, diseñadas para reducir el estrés y aumentar la claridad mental.',
-        classDesc_en: 'Guided mindfulness sessions, body scanning, and cultivation of compassion, designed to reduce stress and increase mental clarity.',
-        phone: '529513464383'
     }
 };

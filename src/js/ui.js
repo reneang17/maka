@@ -233,85 +233,27 @@ function initScrollEffects() {
 }
 
 function initInstructors() {
-    const isMobile = window.innerWidth < 768;
-    
     document.querySelectorAll('[data-instructor]').forEach(item => {
-        // On mobile, don't add click handlers for schedule table cells
-        // But still allow clicks on instructor cards (in Team page)
-        const isInScheduleTable = item.closest('#page-schedule table');
-        
-        if (isMobile && isInScheduleTable) {
-            // Remove cursor pointer on mobile for schedule cells
-            item.classList.remove('cursor-pointer');
-            item.classList.add('cursor-default');
-            return; // Skip adding click handler
-        }
-        
         item.addEventListener('click', () => {
             const key = item.getAttribute('data-instructor');
-            openInstructor(key);
+            
+            // Check if this is in the schedule table
+            const isInScheduleTable = item.closest('#page-schedule table');
+            
+            if (isInScheduleTable) {
+                // Show class options modal for schedule cells
+                showClassOptionsModal(key, item);
+            } else {
+                // Direct navigation for Team page cards
+                openInstructor(key);
+            }
         });
     });
 }
 
 function openInstructor(key) {
-    const data = instructorsData[key];
-    if (!data) return;
-
-    // Store current instructor key for language switching
-    currentInstructorKey = key;
-
-    const lang = languageManager.getCurrentLang();
-    
-    document.getElementById('instructor-name').textContent = data.name;
-    document.getElementById('instructor-style').textContent = lang === 'en' ? (data.style_en || data.style) : data.style;
-    document.getElementById('instructor-bio').innerHTML = lang === 'en' ? (data.bio_en || data.bio) : data.bio;
-    document.getElementById('instructor-quote').innerHTML = `"${lang === 'en' ? (data.quote_en || data.quote) : data.quote}"`;
-    document.getElementById('instructor-class-desc').innerHTML = lang === 'en' ? (data.classDesc_en || data.classDesc) : data.classDesc;
-    
-    const imgEl = document.getElementById('instructor-img');
-    const parentEl = imgEl.parentElement;
-    
-    // Remove existing placeholder if any
-    const existingPlaceholder = parentEl.querySelector('.placeholder-initial');
-    if (existingPlaceholder) existingPlaceholder.remove();
-
-    if (data.image) {
-        imgEl.src = data.image;
-        imgEl.classList.remove('hidden');
-    } else {
-        imgEl.classList.add('hidden');
-        const div = document.createElement('div');
-        div.className = 'placeholder-initial w-full h-full bg-oaxaca-cream flex items-center justify-center';
-        div.innerHTML = `<span class="font-serif text-9xl text-oaxaca-clay opacity-50 select-none">${data.name.charAt(0)}</span>`;
-        parentEl.appendChild(div);
-    }
-    
-    imgEl.alt = data.name;
-
-    const message = `Hola, quisiera información sobre las clases de ${data.style} con ${data.name}.`;
-    const whatsappUrl = `https://wa.me/${data.phone}?text=${encodeURIComponent(message)}`;
-    document.getElementById('instructor-whatsapp').href = whatsappUrl;
-
-    navigateTo('instructor');
-}
-
-// Update instructor content when language changes (if instructor page is open)
-function updateInstructorContent() {
-    if (!currentInstructorKey) return;
-    
-    const instructorPage = document.getElementById('page-instructor');
-    if (!instructorPage || instructorPage.classList.contains('hidden')) return;
-    
-    const data = instructorsData[currentInstructorKey];
-    if (!data) return;
-    
-    const lang = languageManager.getCurrentLang();
-    
-    document.getElementById('instructor-style').textContent = lang === 'en' ? (data.style_en || data.style) : data.style;
-    document.getElementById('instructor-bio').innerHTML = lang === 'en' ? (data.bio_en || data.bio) : data.bio;
-    document.getElementById('instructor-quote').innerHTML = `"${lang === 'en' ? (data.quote_en || data.quote) : data.quote}"`;
-    document.getElementById('instructor-class-desc').innerHTML = lang === 'en' ? (data.classDesc_en || data.classDesc) : data.classDesc;
+    // Navigate to individual instructor page
+    navigateTo(`instructor-${key}`);
 }
 
 function initLightbox() {
@@ -488,4 +430,82 @@ function initScheduleLightbox() {
             document.body.style.overflow = '';
         }
     });
+}
+
+// Show class options modal for schedule table cells
+function showClassOptionsModal(instructorKey, cellElement) {
+    const data = instructorsData[instructorKey];
+    if (!data) return;
+    
+    const modal = document.getElementById('class-options-modal');
+    const titleEl = document.getElementById('class-options-title');
+    const instructorEl = document.getElementById('class-options-instructor');
+    const profileBtn = document.getElementById('class-options-profile');
+    const whatsappLink = document.getElementById('class-options-whatsapp');
+    const closeBtn = document.getElementById('class-options-close');
+    
+    if (!modal) return;
+    
+    // Get class name from the cell
+    const classNameEl = cellElement.querySelector('[data-i18n]');
+    const className = classNameEl ? classNameEl.textContent : 'Yoga';
+    
+    // Get current language
+    const lang = languageManager.currentLang || 'es';
+    const withText = lang === 'en' ? 'with' : 'con';
+    const viewProfileText = lang === 'en' ? `View ${data.name}'s profile` : `Ver perfil de ${data.name}`;
+    
+    // Populate modal
+    titleEl.textContent = className;
+    instructorEl.textContent = `${withText} ${data.name}`;
+    
+    // Update profile button text
+    profileBtn.querySelector('span').textContent = viewProfileText;
+    
+    // Setup WhatsApp link
+    const message = lang === 'en' 
+        ? `Hi, I'd like to ask about availability for the ${className} class with ${data.name}`
+        : `Hola, quisiera preguntar por disponibilidad para la clase de ${className} con ${data.name}`;
+    whatsappLink.href = `https://wa.me/${data.phone}?text=${encodeURIComponent(message)}`;
+    
+    // Show modal
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    
+    // Profile button handler
+    const profileHandler = () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        openInstructor(instructorKey);
+        profileBtn.removeEventListener('click', profileHandler);
+    };
+    profileBtn.addEventListener('click', profileHandler);
+    
+    // Close button handler
+    const closeHandler = () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        closeBtn.removeEventListener('click', closeHandler);
+    };
+    closeBtn.addEventListener('click', closeHandler);
+    
+    // Background click handler
+    const bgHandler = (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            modal.removeEventListener('click', bgHandler);
+        }
+    };
+    modal.addEventListener('click', bgHandler);
+    
+    // Escape key handler
+    const escHandler = (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', escHandler);
+        }
+    };
+    document.addEventListener('keydown', escHandler);
 }

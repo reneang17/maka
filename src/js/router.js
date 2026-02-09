@@ -16,7 +16,7 @@ export function initRouter() {
 
     // Check for hash on load
     const hash = window.location.hash.substring(1);
-    const validPages = ['home', 'space', 'vision', 'schedule', 'team', 'instructor', 'contact', 'testimonios'];
+    const validPages = ['home', 'space', 'vision', 'schedule', 'team', 'contact', 'testimonios', 'instructor-alosja', 'instructor-maria', 'instructor-karina', 'instructor-phan'];
     
     if (hash && validPages.includes(hash)) {
         navigateTo(hash, null, false);
@@ -33,7 +33,7 @@ export function initRouter() {
 }
 
 export function navigateTo(pageId, sectionId = null, pushState = true) {
-    const pages = ['home', 'space', 'vision', 'schedule', 'team', 'instructor', 'contact', 'testimonios'];
+    const pages = ['home', 'space', 'vision', 'schedule', 'team', 'contact', 'testimonios', 'instructor-alosja', 'instructor-maria', 'instructor-karina', 'instructor-phan'];
     
     // Hide all
     pages.forEach(p => {
