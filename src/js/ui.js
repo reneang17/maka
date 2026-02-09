@@ -233,18 +233,29 @@ function initScrollEffects() {
 }
 
 function initInstructors() {
+    // Temporarily disabled instructor profiles (still being worked on)
+    const disabledProfiles = ['karina', 'phan', 'alosja'];
+    
     document.querySelectorAll('[data-instructor]').forEach(item => {
+        const key = item.getAttribute('data-instructor');
+        const isDisabled = disabledProfiles.includes(key);
+        
+        // Check if this is in the schedule table
+        const isInScheduleTable = item.closest('#page-schedule table');
+        
+        // For Team page cards of disabled instructors, remove clickable styling
+        if (!isInScheduleTable && isDisabled) {
+            item.classList.remove('cursor-pointer');
+            item.classList.add('cursor-default');
+            return; // Don't add click handler
+        }
+        
         item.addEventListener('click', () => {
-            const key = item.getAttribute('data-instructor');
-            
-            // Check if this is in the schedule table
-            const isInScheduleTable = item.closest('#page-schedule table');
-            
             if (isInScheduleTable) {
                 // Show class options modal for schedule cells
-                showClassOptionsModal(key, item);
+                showClassOptionsModal(key, item, isDisabled);
             } else {
-                // Direct navigation for Team page cards
+                // Direct navigation for Team page cards (only enabled instructors)
                 openInstructor(key);
             }
         });
@@ -433,7 +444,7 @@ function initScheduleLightbox() {
 }
 
 // Show class options modal for schedule table cells
-function showClassOptionsModal(instructorKey, cellElement) {
+function showClassOptionsModal(instructorKey, cellElement, hideProfile = false) {
     const data = instructorsData[instructorKey];
     if (!data) return;
     
@@ -459,8 +470,14 @@ function showClassOptionsModal(instructorKey, cellElement) {
     titleEl.textContent = className;
     instructorEl.textContent = `${withText} ${data.name}`;
     
-    // Update profile button text
-    profileBtn.querySelector('span').textContent = viewProfileText;
+    // Hide or show profile button based on whether profile is disabled
+    if (hideProfile) {
+        profileBtn.classList.add('hidden');
+    } else {
+        profileBtn.classList.remove('hidden');
+        // Update profile button text
+        profileBtn.querySelector('span').textContent = viewProfileText;
+    }
     
     // Setup WhatsApp link
     const message = lang === 'en' 
@@ -472,14 +489,16 @@ function showClassOptionsModal(instructorKey, cellElement) {
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
     
-    // Profile button handler
+    // Profile button handler (only if not hidden)
     const profileHandler = () => {
         modal.classList.add('hidden');
         document.body.style.overflow = '';
         openInstructor(instructorKey);
         profileBtn.removeEventListener('click', profileHandler);
     };
-    profileBtn.addEventListener('click', profileHandler);
+    if (!hideProfile) {
+        profileBtn.addEventListener('click', profileHandler);
+    }
     
     // Close button handler
     const closeHandler = () => {
