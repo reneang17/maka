@@ -16,7 +16,7 @@ function initRandomInstructors() {
     const container = document.getElementById('instructors-container');
     if (!container) return; // Guard clause if container doesn't exist yet
 
-    const instructorKeys = ['maria', 'alosja', 'karina', 'paty'];
+    const instructorKeys = ['maria', 'alosja', 'elena', 'karina', 'paty'];
     
     // Shuffle
     instructorKeys.sort(() => Math.random() - 0.5);
