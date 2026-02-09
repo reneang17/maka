@@ -13,11 +13,10 @@ export function initUI() {
     initInstructors();
     
     // Listen for language changes
+    // Listen for language changes
     document.addEventListener('languageChanged', () => {
         initRandomInstructors();
-        // Check if instructor modal is open and update it if possible
-        // We would need to store the current open instructor key.
-        // For now, let's just update the grid items.
+        initInstructors(); // Re-attach event listeners after DOM update
     });
 }
 
