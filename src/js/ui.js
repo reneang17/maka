@@ -15,6 +15,7 @@ export function initUI() {
     initRandomInstructors();
     initInstructors();
     initAudioTestimonials();
+    initScheduleLightbox();
     
     // Listen for language changes
     document.addEventListener('languageChanged', () => {
@@ -232,7 +233,20 @@ function initScrollEffects() {
 }
 
 function initInstructors() {
+    const isMobile = window.innerWidth < 768;
+    
     document.querySelectorAll('[data-instructor]').forEach(item => {
+        // On mobile, don't add click handlers for schedule table cells
+        // But still allow clicks on instructor cards (in Team page)
+        const isInScheduleTable = item.closest('#page-schedule table');
+        
+        if (isMobile && isInScheduleTable) {
+            // Remove cursor pointer on mobile for schedule cells
+            item.classList.remove('cursor-pointer');
+            item.classList.add('cursor-default');
+            return; // Skip adding click handler
+        }
+        
         item.addEventListener('click', () => {
             const key = item.getAttribute('data-instructor');
             openInstructor(key);
@@ -410,5 +424,68 @@ function initAudioTestimonials() {
                 }
             });
         });
+    });
+}
+
+// Schedule lightbox for mobile devices
+function initScheduleLightbox() {
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+    
+    const scheduleContainer = document.querySelector('#page-schedule .overflow-x-auto');
+    const lightbox = document.getElementById('schedule-lightbox');
+    const lightboxContent = document.getElementById('schedule-lightbox-content');
+    const closeBtn = document.getElementById('schedule-lightbox-close');
+    
+    if (!scheduleContainer || !lightbox || !lightboxContent || !closeBtn) return;
+    
+    // Make the schedule container clickable on mobile
+    scheduleContainer.classList.add('cursor-pointer');
+    
+    // Open lightbox when schedule is tapped
+    scheduleContainer.addEventListener('click', (e) => {
+        // Don't open if clicking on an instructor link (but we already disabled those on mobile)
+        if (e.target.closest('[data-instructor]')) return;
+        
+        // Clone the table and put it in the lightbox
+        const table = scheduleContainer.querySelector('table');
+        if (table) {
+            lightboxContent.innerHTML = '';
+            const clonedTable = table.cloneNode(true);
+            // Make the cloned table not respond to clicks
+            clonedTable.querySelectorAll('[data-instructor]').forEach(cell => {
+                cell.classList.remove('cursor-pointer', 'hover:bg-black/5');
+                cell.classList.add('cursor-default');
+            });
+            lightboxContent.appendChild(clonedTable);
+        }
+        
+        // Show lightbox
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+    
+    // Close lightbox
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+    });
+    
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target.closest('#schedule-lightbox > div') === e.target.querySelector('#schedule-lightbox > div')) {
+            if (!e.target.closest('#schedule-lightbox-content')) {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
     });
 }

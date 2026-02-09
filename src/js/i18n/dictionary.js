@@ -139,6 +139,7 @@ export const translations = {
     // Schedule
     "sched_back": { es: "&larr; Volver al inicio", en: "&larr; Back to home" },
     "sched_page_title": { es: "Nuestros Horarios", en: "Our Schedule" },
+    "sched_tap_hint": { es: "Toca la tabla para verla en pantalla completa", en: "Tap the table to view fullscreen" },
     "sched_col_time": { es: "Hora", en: "Time" },
     "sched_days": {
         "mon": { es: "Lunes", en: "Monday" },
