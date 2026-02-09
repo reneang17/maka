@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Main Entry Point -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </head>
 <body class="bg-texture text-oaxaca-text font-sans antialiased selection:bg-oaxaca-clay selection:text-white flex flex-col min-h-screen">
 
@@ -24,7 +24,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer group" data-link="home">
-                    <img src="/logo.png" alt="Maka Yoga Logo" class="h-12 w-auto mr-3 group-hover:opacity-80 transition duration-300">
+                    <img src="./logo.png" alt="Maka Yoga Logo" class="h-12 w-auto mr-3 group-hover:opacity-80 transition duration-300">
                     <span class="font-serif text-3xl font-bold text-oaxaca-wood group-hover:opacity-80 transition duration-300 transform -rotate-1">
                         MAKA <span class="text-oaxaca-clay font-bold">YOGA</span>
                     </span>
@@ -323,7 +323,7 @@
                     <p class="font-normal text-lg opacity-90 mb-8">Estamos a un mensaje de distancia.</p>
                     <div class="flex space-x-10 justify-center md:justify-start items-center">
                         <!-- WhatsApp -->
-                        <a href="https://wa.me/529511234567" target="_blank" aria-label="WhatsApp" class="text-oaxaca-cream hover:text-green-400 transition-all duration-300 transform hover:scale-125 hover:rotate-6">
+                                        <a href="https://wa.me/529513464383" target="_blank" class="text-oaxaca-text/60 hover:text-green-500 text-3xl transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
                             <i class="fab fa-whatsapp text-6xl filter drop-shadow-lg"></i>
                         </a>
                         <!-- Instagram -->
@@ -520,7 +520,7 @@
                     <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4 mb-8">Nuestras Guías</h2>
                 </div>
 
-                <div id="instructors-container" class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center max-w-2xl mx-auto">
+                <div id="instructors-container" class="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
                     <!-- Instructors will be loaded here dynamically -->
                 </div>
             </div>
@@ -617,7 +617,7 @@
                                 <div>
                                     <h4 class="font-bold text-oaxaca-wood text-lg mb-3">Conecta</h4>
                                     <div class="flex space-x-6">
-                                        <a href="https://wa.me/529511234567" target="_blank" class="text-oaxaca-text/60 hover:text-green-500 text-3xl transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://wa.me/529513464383" target="_blank" class="text-oaxaca-text/60 hover:text-green-500 text-3xl transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
                                         <a href="#" target="_blank" class="text-oaxaca-text/60 hover:text-pink-500 text-3xl transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
                                         <a href="#" target="_blank" class="text-oaxaca-text/60 hover:text-blue-500 text-3xl transition transform hover:scale-110"><i class="fab fa-facebook"></i></a>
                                     </div>
@@ -654,58 +654,118 @@
                     <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4">Nuestros Horarios</h2>
                 </div>
                 <div class="overflow-x-auto rounded-lg shadow-lg">
-                    <table class="w-full text-left border-collapse">
+                    <table class="w-full text-left border-collapse border border-[#876848]/40">
                         <thead>
                             <tr class="bg-[#876848] text-white">
-                                <th class="p-4 font-serif text-xl font-normal">Hora</th>
-                                <th class="p-4 font-serif text-xl font-normal">Lunes</th>
-                                <th class="p-4 font-serif text-xl font-normal">Martes</th>
-                                <th class="p-4 font-serif text-xl font-normal">Miércoles</th>
-                                <th class="p-4 font-serif text-xl font-normal">Jueves</th>
-                                <th class="p-4 font-serif text-xl font-normal">Viernes</th>
-                                <th class="p-4 font-serif text-xl font-normal">Sábado</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Hora</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Lunes</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Martes</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Miércoles</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Jueves</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Viernes</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Sábado</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Domingo</th>
                             </tr>
                         </thead>
                         <tbody class="text-[#876848]">
-                             <!-- Fila 1 -->
-                            <tr class="bg-[#F6E0B5] border-b border-white/20">
-                                <td class="p-4 font-bold opacity-80">7:00 am</td>
-                                <td class="p-4">Vinyasa Flow</td>
-                                <td class="p-4">Hatha Suave</td>
-                                <td class="p-4">Vinyasa Flow</td>
-                                <td class="p-4">Hatha Suave</td>
-                                <td class="p-4">Vinyasa Flow</td>
-                                <td class="p-4 text-center text-sm opacity-50">-</td>
-                            </tr>
-                            <!-- Fila 2 -->
-                            <tr class="bg-[#F6E0B5] border-b border-white/20">
-                                <td class="p-4 font-bold opacity-80">9:00 am</td>
-                                <td class="p-4">Hatha Yoga</td>
-                                <td class="p-4">Restaurativo</td>
-                                <td class="p-4">Hatha Yoga</td>
-                                <td class="p-4">Restaurativo</td>
-                                <td class="p-4">Hatha Yoga</td>
-                                <td class="p-4">Clase Comunidad</td>
-                            </tr>
-                            <!-- Fila 3 -->
-                            <tr class="bg-[#F6E0B5] border-b border-white/20">
-                                <td class="p-4 font-bold opacity-80">6:00 pm</td>
-                                <td class="p-4">Yin Yoga</td>
-                                <td class="p-4">Meditación</td>
-                                <td class="p-4">Yin Yoga</td>
-                                <td class="p-4">Meditación</td>
-                                <td class="p-4">Relajación Sonora</td>
-                                <td class="p-4 text-center text-sm opacity-50">-</td>
-                            </tr>
-                            <!-- Fila 4 -->
+                             <!-- 8:00 AM -->
                             <tr class="bg-[#F6E0B5]">
-                                <td class="p-4 font-bold opacity-80">7:30 pm</td>
-                                <td class="p-4">Ashtanga Intro</td>
-                                <td class="p-4">Vinyasa Suave</td>
-                                <td class="p-4">Ashtanga Intro</td>
-                                <td class="p-4">Vinyasa Suave</td>
-                                <td class="p-4 text-center text-sm opacity-50">-</td>
-                                <td class="p-4 text-center text-sm opacity-50">-</td>
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">8:00 am</td>
+                                <td class="p-4 border border-[#876848]/40">Alineamiento Restaurativo<br><span class="text-sm opacity-75">con Alosja</span></td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40">Alineamiento Restaurativo<br><span class="text-sm opacity-75">con Alosja</span></td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40">Alineamiento Restaurativo<br><span class="text-sm opacity-75">con Alosja</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                            <!-- 8:30 AM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">8:30 am</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                            <!-- 9:00 AM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">9:00 am</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                            </tr>
+                            <!-- 10:00 AM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">10:00 am</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40">Vinyasa somática<br><span class="text-sm opacity-75">con Phan</span></td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40">Vinyasa somática<br><span class="text-sm opacity-75">con Phan</span></td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                            <!-- 4:00 PM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">4:00 pm</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                            <!-- 5:00 PM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">5:00 pm</td>
+                                <td class="p-4 border border-[#876848]/40">Vinyasa<br><span class="text-sm opacity-75">con Paty</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Vinyasa<br><span class="text-sm opacity-75">con Paty</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Vinyasa<br><span class="text-sm opacity-75">con Paty</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                            <!-- 5:30 PM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">5:30 pm</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Yin Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Yin Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                            <!-- 6:30 PM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">6:30 pm</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                            </tr>
+                             <!-- 7:00 PM -->
+                            <tr class="bg-[#F6E0B5]">
+                                <td class="p-4 font-bold opacity-80 border border-[#876848]/40">7:00 pm</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga suave<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 border border-[#876848]/40">Hatha Yoga suave<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
+                                <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
                         </tbody>
                     </table>
