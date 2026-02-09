@@ -21,22 +21,23 @@
     <!-- Navegación -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-oaxaca-cream/95 backdrop-blur-sm border-b border-oaxaca-wood/10 shadow-sm" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-20 md:h-24 lg:h-28">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer group" data-link="home">
-                    <img src="./logo.png" alt="Maka Yoga Logo" class="h-12 w-auto mr-3 group-hover:opacity-80 transition duration-300">
-                    <span class="font-serif text-3xl font-bold text-oaxaca-wood group-hover:opacity-80 transition duration-300 transform -rotate-1">
+                    <img src="assets/logo/logo.png" alt="Maka Yoga Logo" class="h-12 md:h-16 lg:h-20 w-auto mr-3 md:mr-4 lg:mr-6 group-hover:opacity-80 transition duration-300">
+                    <span class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-oaxaca-wood group-hover:opacity-80 transition duration-300 transform -rotate-1">
                         MAKA <span class="text-oaxaca-clay font-bold">YOGA</span>
                     </span>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-12">
-                    <button data-link="vision" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Visión</button>
-                    <button data-link="team" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Nosotras</button>
-                    <button data-link="schedule" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Horarios</button>
-                    <button data-link="space" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Espacio</button>
-                    <button data-link="contact" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg">Contacto</button>
+                <div class="hidden md:flex space-x-8 lg:space-x-12 items-center">
+                    <button data-link="vision" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_vision">Visión</button>
+                    <button data-link="team" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_team">Nosotras</button>
+                    <button data-link="schedule" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_schedule">Horarios</button>
+                    <button data-link="space" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_space">Espacio</button>
+                    <button data-link="contact" class="text-oaxaca-text font-semibold hover:text-oaxaca-clay transition text-lg lg:text-2xl" data-i18n="nav_contact">Contacto</button>
+                    <button id="lang-toggle-desktop" class="text-oaxaca-wood hover:text-oaxaca-clay font-bold border border-oaxaca-wood/30 rounded-full px-3 py-1 text-sm bg-white/50 transition duration-300" onclick="import('./src/js/i18n/languageManager.js').then(m => m.languageManager.toggleLanguage())">EN</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -51,11 +52,12 @@
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-oaxaca-cream absolute w-full border-b border-oaxaca-wood/10 shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-4 text-center flex flex-col">
-                <button data-link="vision" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Visión</button>
-                <button data-link="team" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Nosotras</button>
-                <button data-link="schedule" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Horarios</button>
-                <button data-link="space" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Espacio</button>
-                <button data-link="contact" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold">Contacto</button>
+                <button data-link="vision" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_vision">Visión</button>
+                <button data-link="team" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_team">Nosotras</button>
+                <button data-link="schedule" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_schedule">Horarios</button>
+                <button data-link="space" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_space">Espacio</button>
+                <button data-link="contact" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-semibold" data-i18n="nav_contact">Contacto</button>
+                <button id="lang-toggle-mobile" class="text-oaxaca-wood hover:text-oaxaca-clay py-2 font-sans text-xl font-bold uppercase" onclick="import('./src/js/i18n/languageManager.js').then(m => m.languageManager.toggleLanguage())">EN</button>
             </div>
         </div>
     </nav>
@@ -64,18 +66,18 @@
     <div id="page-home">
         
         <!-- Hero Section -->
-        <section id="inicio" class="relative mt-20 grid grid-cols-1 place-items-center bg-oaxaca-wood min-h-[calc(100vh-5rem)]">
+        <section id="inicio" class="relative mt-20 grid grid-cols-1 place-items-center bg-oaxaca-wood min-h-[55vh] md:min-h-[calc(100vh-5rem)]">
             
             <!-- Contenedor del Carrusel -->
             <div id="hero-carousel" class="col-start-1 row-start-1 w-full grid grid-cols-1 z-0">
                 <div class="col-start-1 row-start-1 w-full transition-opacity duration-2000 ease-in-out opacity-100" data-carousel-item>
-                    <img src="assets/carrusel_intro/1.jpg" alt="Estudio de Yoga Vacío Minimalista" class="w-full h-auto min-h-[calc(100vh-5rem)] object-cover object-top brightness-75">
+                    <img src="assets/carrusel_intro/1.jpg" alt="Estudio de Yoga Vacío Minimalista" class="w-full h-auto min-h-[55vh] md:min-h-[calc(100vh-5rem)] object-cover object-center brightness-75">
                 </div>
                 <div class="col-start-1 row-start-1 w-full transition-opacity duration-2000 ease-in-out opacity-0" data-carousel-item>
-                    <img src="assets/carrusel_intro/2.jpg" alt="Detalle de Práctica y Naturaleza" class="w-full h-auto min-h-[calc(100vh-5rem)] object-cover object-top brightness-75">
+                    <img src="assets/carrusel_intro/2.jpg" alt="Detalle de Práctica y Naturaleza" class="w-full h-auto min-h-[55vh] md:min-h-[calc(100vh-5rem)] object-cover object-center brightness-75">
                 </div>
                 <div class="col-start-1 row-start-1 w-full transition-opacity duration-2000 ease-in-out opacity-0" data-carousel-item>
-                    <img src="assets/carrusel_intro/3.jpg" alt="Espacio de Calma" class="w-full h-auto min-h-[calc(100vh-5rem)] object-cover object-top brightness-75">
+                    <img src="assets/carrusel_intro/3.jpg" alt="Espacio de Calma" class="w-full h-auto min-h-[55vh] md:min-h-[calc(100vh-5rem)] object-cover object-center brightness-75">
                 </div>
             </div>
 
@@ -89,15 +91,15 @@
             <!-- Contenido Hero -->
             <div class="col-start-1 row-start-1 z-10 text-center px-4 max-w-4xl mx-auto fade-in-up pointer-events-none">
                 <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-white mb-6 leading-none shadow-sm">
-                    Un refugio seguro <br>
-                    <span class="text-4xl md:text-6xl lg:text-7xl block mt-2 text-oaxaca-cream">para sanar en comunidad</span>
+                    <span data-i18n="hero_title">Un refugio seguro</span> <br>
+                    <span class="text-4xl md:text-6xl lg:text-7xl block mt-2 text-oaxaca-cream" data-i18n="hero_subtitle">para sanar en comunidad</span>
                 </h1>
             </div>
 
             <!-- Botón de Navegación -->
             <div class="absolute bottom-24 left-0 w-full text-center z-10 fade-in-up pointer-events-auto">
-                <button data-link="space" class="inline-block px-8 py-4 bg-oaxaca-cream text-oaxaca-wood font-bold rounded-full hover:bg-white hover:scale-105 transition duration-300 text-lg shadow-lg">
-                    Descubre nuestro espacio
+                <button data-link="home" data-section="voices" class="inline-block px-8 py-4 bg-oaxaca-cream text-oaxaca-wood font-bold rounded-full hover:bg-white hover:scale-105 transition duration-300 text-lg shadow-lg" data-i18n="hero_cta">
+                    Voces de la comunidad
                 </button>
             </div>
         </section>
@@ -117,10 +119,10 @@
                         <!-- Mensaje 1 -->
                         <div class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 translate-x-0 flex flex-col justify-center" data-message-slide>
                             <h2 class="font-serif text-4xl md:text-5xl text-oaxaca-wood mb-6 leading-tight">
-                                "Bienvenida a Maka. <br>
-                                <span class="italic text-oaxaca-clay">Tu refugio en Oaxaca."</span>
+                                "<span data-i18n="msg_1_title">Bienvenida a Maka.</span> <br>
+                                <span class="italic text-oaxaca-clay" data-i18n="msg_1_subtitle">Tu refugio en Oaxaca."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6" data-i18n="msg_1_text">
                                 Maka es una respuesta desde la resiliencia. Un espacio seguro en el corazón de la ciudad diseñado para que te habites de nuevo.
                             </p>
                         </div>
@@ -131,7 +133,7 @@
                                 "Aquí no se viene a dar clases. <br>
                                 <span class="italic text-oaxaca-clay">Se viene a formar comunidad."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 No buscamos seguidores. Buscamos personas que entiendan que enseñar Yoga también es tejer redes humanas.
                             </p>
                         </div>
@@ -142,7 +144,7 @@
                                 "El cuerpo no es estética: <br>
                                 <span class="italic text-oaxaca-clay">es territorio de memoria."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 La práctica no es para escapar de la vida, sino para poder vivirla con más recursos.
                             </p>
                         </div>
@@ -153,7 +155,7 @@
                                 "La diversidad <br>
                                 <span class="italic text-oaxaca-clay">no es una cuota."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 Es nuestra realidad. Celebramos todos los cuerpos, edades y orígenes. Tu historia es bienvenida aquí.
                             </p>
                         </div>
@@ -164,7 +166,7 @@
                                 "El descanso <br>
                                 <span class="italic text-oaxaca-clay">es un acto político."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 En un mundo que nos exige producir constantemente, detenernos a respirar es revolucionario.
                             </p>
                         </div>
@@ -175,7 +177,7 @@
                                 "No somos gurús. <br>
                                 <span class="italic text-oaxaca-clay">Somos guías."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 Acompañamos tu proceso sin imponer verdades absolutas. La sabiduría ya está en ti; nosotras solo ayudamos a despertarla.
                             </p>
                         </div>
@@ -186,7 +188,7 @@
                                 "Oaxaca es nuestra raíz <br>
                                 <span class="italic text-oaxaca-clay">y nuestra inspiración."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 Honramos la tierra que pisamos y las tradiciones que nos nutren, integrando la sabiduría local con la práctica global del yoga.
                             </p>
                         </div>
@@ -197,7 +199,7 @@
                                 "Tu presencia <br>
                                 <span class="italic text-oaxaca-clay">completa el círculo."</span>
                             </h2>
-                            <p class="text-xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
+                            <p class="text-2xl text-oaxaca-text/80 font-light leading-relaxed border-l-4 border-oaxaca-clay pl-6">
                                 Maka no está completo sin ti. Cada respiración tuya aporta a la energía colectiva de este espacio.
                             </p>
                         </div>
@@ -215,7 +217,7 @@
                     </div>
 
                     <div class="mt-8 z-20">
-                        <button data-link="vision" class="group text-oaxaca-wood font-bold hover:text-oaxaca-clay transition flex items-center gap-2 text-sm uppercase tracking-wide">
+                        <button data-link="vision" class="group text-oaxaca-wood font-bold hover:text-oaxaca-clay transition flex items-center gap-2 text-base uppercase tracking-wide">
                             Leer Manifiesto Completo
                             <i class="fas fa-arrow-right transform group-hover:translate-x-2 transition"></i>
                         </button>
@@ -258,10 +260,10 @@
         </section>
 
         <!-- Testimonios -->
-        <section class="py-20 px-6 bg-oaxaca-cream/30 border-t border-oaxaca-wood/5">
+        <section id="voices" class="py-20 px-6 bg-oaxaca-cream/30 border-t border-oaxaca-wood/5">
             <div class="max-w-7xl mx-auto">
-                 <div class="text-center mb-16">
-                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4">Voces de la Comunidad</h2>
+                <div class="text-center mb-16">
+                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4" data-i18n="voices_title">Voces de la Comunidad</h2>
                 </div>
                 <!-- Video content omitted for brevity but structure kept -->
                 <!-- Shorts Container (Moved Up) -->
@@ -271,21 +273,21 @@
                         <div class="aspect-[9/16] w-full max-w-[280px] rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-black transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/sdRmRKci69s" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <span class="mt-6 font-serif text-xl text-oaxaca-wood">Sobre la Calma</span>
+                        <span class="mt-6 font-serif text-2xl text-oaxaca-wood text-center">Gracias Rutilo por compartirnos tu voz</span>
                     </div>
                      <!-- Short 2 -->
                      <div class="flex flex-col items-center group">
                         <div class="aspect-[9/16] w-full max-w-[280px] rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-black transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/-jYDs8fCzXE" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <span class="mt-6 font-serif text-xl text-oaxaca-wood">Sobre el Respeto</span>
+                        <span class="mt-6 font-serif text-2xl text-oaxaca-wood text-center">Gracias Isa por compartirnos tu voz</span>
                     </div>
                      <!-- Short 3 -->
                      <div class="flex flex-col items-center group">
                         <div class="aspect-[9/16] w-full max-w-[280px] rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-black transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/w5ypuMy7-XM" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <span class="mt-6 font-serif text-xl text-oaxaca-wood">Sobre la Fuerza</span>
+                        <span class="mt-6 font-serif text-2xl text-oaxaca-wood text-center">Gracias Daniel por compartirnos tu voz</span>
                     </div>
                 </div>
 
@@ -294,7 +296,7 @@
                     <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-black">
                         <iframe class="w-full h-full" src="https://www.youtube.com/embed/SrYoQVvJqJA" title="Review de Maka" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <p class="text-center mt-6 text-oaxaca-text/70 italic font-serif text-2xl">"Encontrar Maka fue encontrar un hogar para mi práctica."</p>
+                    <p class="text-center mt-6 text-oaxaca-text/70 italic font-serif text-3xl">"Gracias Araceli por compartirnos tu voz"</p>
                 </div>
             </div>
         </section>
@@ -303,24 +305,24 @@
         <section class="bg-oaxaca-wood text-oaxaca-cream py-20 px-6">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
                 <div>
-                    <h3 class="font-serif text-4xl mb-6">Ubicación</h3>
-                    <p class="font-normal text-lg opacity-90 mb-2">Calle Macedonio Alcalá 123</p>
-                    <p class="font-normal text-lg opacity-90">68000 Oaxaca de Juárez, Oax.</p>
+                    <h3 class="font-serif text-4xl mb-6" data-i18n="loc_title">Ubicación</h3>
+                    <p class="font-normal text-xl opacity-90 mb-2">Calle Macedonio Alcalá 123</p>
+                    <p class="font-normal text-xl opacity-90">68000 Oaxaca de Juárez, Oax.</p>
                     <div class="mt-6">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Macedonio+Alcalá+123+Centro+Histórico+Oaxaca+de+Juárez" target="_blank" aria-label="Ver en Google Maps" class="inline-block text-oaxaca-cream hover:text-red-400 transition-all duration-300 transform hover:scale-125 hover:-rotate-6">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Macedonio+Alcalá+123+Centro+Histórico+Oaxaca+de+Juárez" target="_blank" aria-label="Ver en Google Maps" class="inline-block text-oaxaca-cream hover:text-red-400 transition-all duration-300 transform hover:scale-125 hover:-rotate-6" data-i18n="loc_view_map">
                             <i class="fas fa-map-marker-alt text-5xl filter drop-shadow-lg"></i>
                         </a>
                     </div>
                 </div>
                 <div>
-                     <h3 class="font-serif text-4xl mb-6">Horarios</h3>
-                    <button data-link="schedule" class="text-xl font-normal underline decoration-1 underline-offset-4 hover:text-oaxaca-clay transition duration-300">
+                     <h3 class="font-serif text-4xl mb-6" data-i18n="sched_title">Horarios</h3>
+                    <button data-link="schedule" class="text-2xl font-normal underline decoration-1 underline-offset-4 hover:text-oaxaca-clay transition duration-300" data-i18n="sched_cta">
                         Ver horarios
                     </button>
                 </div>
                 <div>
-                    <h3 class="font-serif text-4xl mb-4">Contacto</h3>
-                    <p class="font-normal text-lg opacity-90 mb-8">Estamos a un mensaje de distancia.</p>
+                    <h3 class="font-serif text-4xl mb-4" data-i18n="contact_title">Contacto</h3>
+                    <p class="font-normal text-xl opacity-90 mb-8" data-i18n="contact_text">Estamos a un mensaje de distancia.</p>
                     <div class="flex space-x-10 justify-center md:justify-start items-center">
                         <!-- WhatsApp -->
                                         <a href="https://wa.me/529513464383" target="_blank" class="text-oaxaca-text/60 hover:text-green-500 text-3xl transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
@@ -350,7 +352,7 @@
 
             <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
                 <div class="mb-16 text-center md:text-left">
-                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4" data-i18n="vis_back">
                         &larr; Volver al inicio
                     </button>
                 </div>
@@ -360,38 +362,38 @@
                     
                     <!-- Filosofía (Izquierda - Grande) -->
                     <div class="lg:col-span-7">
-                        <span class="font-serif text-2xl text-[#BBA182] italic tracking-widest block mb-4">Filosofía</span>
-                        <blockquote class="text-4xl md:text-5xl font-light text-oaxaca-wood leading-tight mb-8">
+                        <span class="font-serif text-2xl text-[#BBA182] italic tracking-widest block mb-4" data-i18n="vis_phil_label">Filosofía</span>
+                        <blockquote class="text-4xl md:text-5xl font-light text-oaxaca-wood leading-tight mb-8" data-i18n="vis_phil_quote">
                             "El cuerpo no es un proyecto estético: es territorio de experiencia, memoria y emoción."
                         </blockquote>
-                        <p class="text-xl text-oaxaca-text/80 font-light border-l-4 border-[#BBA182] pl-6">
+                        <p class="text-2xl text-oaxaca-text/80 font-light border-l-4 border-[#BBA182] pl-6" data-i18n="vis_phil_text">
                             La práctica no es para escapar de la vida, sino para poder vivirla con más recursos.
                         </p>
                     </div>
 
                     <!-- Ética de Trabajo (Derecha - Tarjeta) -->
                     <div class="lg:col-span-5 bg-oaxaca-cream/50 p-10 rounded-xl backdrop-blur-sm border border-oaxaca-wood/5">
-                        <h3 class="font-serif text-3xl text-oaxaca-wood mb-6">Nuestra Ética de Trabajo</h3>
+                        <h3 class="font-serif text-3xl text-oaxaca-wood mb-6" data-i18n="vis_ethic_title">Nuestra Ética de Trabajo</h3>
                         <ul class="space-y-4 text-oaxaca-text/90">
                             <li class="flex items-start">
                                 <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
-                                <span>No romantizamos el dolor físico ni emocional.</span>
+                                <span data-i18n="vis_ethic_1">No romantizamos el dolor físico ni emocional.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
-                                <span>No fomentamos dependencia hacia la figura docente.</span>
+                                <span data-i18n="vis_ethic_2">No fomentamos dependencia hacia la figura docente.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
-                                <span>No prometemos curas milagrosas.</span>
+                                <span data-i18n="vis_ethic_3">No prometemos curas milagrosas.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
-                                <span>Derivamos a profesionales de salud cuando es necesario.</span>
+                                <span data-i18n="vis_ethic_4">Derivamos a profesionales de salud cuando es necesario.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-[#BBA182] mr-3 mt-1"><i class="fas fa-check"></i></span>
-                                <span>Cuidamos límites, tiempos de descanso y condiciones laborales dignas.</span>
+                                <span data-i18n="vis_ethic_5">Cuidamos límites, tiempos de descanso y condiciones laborales dignas.</span>
                             </li>
                         </ul>
                     </div>
@@ -399,34 +401,34 @@
 
                 <!-- 2. SECCIÓN: HISTORIA -->
                 <div class="mb-20 pt-10 border-t border-oaxaca-wood/10">
-                    <span class="font-serif text-2xl text-[#BBA182] italic tracking-widest">Nuestra historia</span>
+                    <span class="font-serif text-2xl text-[#BBA182] italic tracking-widest" data-i18n="vis_hist_label">Nuestra historia</span>
                     <h2 class="font-sans font-light text-5xl md:text-7xl text-oaxaca-wood mt-4 leading-tight">
-                        No surgimos del privilegio,<br>
-                        <span class="font-serif italic font-bold">sino de la necesidad humana.</span>
+                        <span data-i18n="vis_hist_title">No surgimos del privilegio,</span><br>
+                        <span class="font-serif italic font-bold" data-i18n="vis_hist_subtitle">sino de la necesidad humana.</span>
                     </h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-20">
                     <div class="md:col-span-5 md:col-start-1 relative">
                         <span class="absolute -top-16 -left-4 text-9xl font-bold text-oaxaca-cream opacity-50 select-none z-[-1]">2017</span>
-                        <h3 class="font-serif text-4xl text-[#BBA182] mb-6">El Origen</h3>
+                        <h3 class="font-serif text-4xl text-[#BBA182] mb-6" data-i18n="vis_origin_title">El Origen</h3>
                         <div class="prose prose-lg text-oaxaca-text font-light leading-relaxed text-justify">
-                            <p class="mb-6">
-                                Todo comenzó en octubre. Entre guardias de hospital y la seguridad de un sueldo fijo, una amiga propuso una locura: abrir una escuela. Yo llevaba seis años trabajando de lunes a sábado en el sector salud, un ritmo que ya pesaba en el cuerpo.
+                            <p class="mb-6" data-i18n="vis_origin_text">
+                                Todo comenzó entre guardias de hospital y la seguridad de un sueldo fijo, una amiga propuso una locura: abrir una escuela. Yo llevaba seis años trabajando de lunes a sábado en el sector salud, un ritmo que ya pesaba en el cuerpo.
                             </p>
-                            <p class="border-l-4 border-[#BBA182] pl-6 italic text-gray-500">
+                            <p class="border-l-4 border-[#BBA182] pl-6 italic text-gray-500" data-i18n="vis_origin_quote">
                                 "Maka no nació como un plan de negocios perfecto. Nació como una respuesta a la ansiedad, a la crisis y al deseo de encontrar un lugar donde practicar no significara dejar de ser humana."
                             </p>
                         </div>
                     </div>
 
                     <div class="md:col-span-6 md:col-start-7 mt-12 md:mt-32">
-                        <h3 class="font-serif text-4xl text-[#BBA182] mb-6">La Resiliencia</h3>
+                        <h3 class="font-serif text-4xl text-[#BBA182] mb-6" data-i18n="vis_res_title">La Resiliencia</h3>
                         <div class="prose prose-lg text-oaxaca-text font-light leading-relaxed text-justify">
-                            <p class="mb-6">
+                            <p class="mb-6" data-i18n="vis_res_text_1">
                                 La pandemia nos silenció. Tuvimos que dejar nuestro primer local; no podíamos poner en riesgo la salud de nadie. Mi socia tomó otro camino y me quedé sola, sin el trabajo del hospital y con el estudio cerrado.
                             </p>
-                            <p>
+                            <p data-i18n="vis_res_text_2">
                                 Fue ahí, en la incertidumbre, donde Maka encontró su verdadera fuerza. Nos mudamos a lo digital, nos aferramos a la práctica y aprendimos que <strong>el espacio no son las paredes, sino la red humana que lo sostiene.</strong> Hoy, Maka crece desde la resiliencia, ofreciendo prácticas seguras, accesibles y profundamente éticas.
                             </p>
                         </div>
@@ -436,38 +438,38 @@
                 <!-- 3. SECCIÓN: VALORES -->
                  <div class="mb-32 pt-10 border-t border-oaxaca-wood/10">
                     <div class="text-center mb-16">
-                        <h2 class="font-sans font-light text-5xl md:text-6xl text-oaxaca-wood mt-4">Nuestros Valores</h2>
+                        <h2 class="font-sans font-light text-5xl md:text-6xl text-oaxaca-wood mt-4" data-i18n="vis_vals_title">Nuestros Valores</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Valor 1 -->
                         <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
                             <i class="fas fa-heart text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
-                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Cuidado antes que rendimiento</h3>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2" data-i18n="vis_val_1">Cuidado antes que rendimiento</h3>
                         </div>
                         <!-- Valor 2 -->
                         <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
                             <i class="fas fa-microscope text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
-                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Ciencia y experiencia dialogando</h3>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2" data-i18n="vis_val_2">Ciencia y experiencia dialogando</h3>
                         </div>
                         <!-- Valor 3 -->
                         <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
                             <i class="fas fa-users text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
-                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Accesibilidad y conciencia social</h3>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2" data-i18n="vis_val_3">Accesibilidad y conciencia social</h3>
                         </div>
                         <!-- Valor 4 -->
                         <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
                             <i class="fas fa-fingerprint text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
-                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Respeto a los procesos individuales</h3>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2" data-i18n="vis_val_4">Respeto a los procesos individuales</h3>
                         </div>
                         <!-- Valor 5 -->
                         <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
                             <i class="fas fa-hands-holding-circle text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
-                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Comunidad antes que competencia</h3>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2" data-i18n="vis_val_5">Comunidad antes que competencia</h3>
                         </div>
                         <!-- Valor 6 -->
                         <div class="p-8 border border-oaxaca-wood/10 hover:border-[#BBA182] transition duration-500 hover:shadow-lg bg-white group">
                             <i class="fas fa-balance-scale text-[#BBA182] text-3xl mb-4 group-hover:scale-110 transition duration-300"></i>
-                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2">Coherencia entre lo que enseñamos y cómo trabajamos</h3>
+                            <h3 class="font-serif text-2xl text-oaxaca-text mb-2" data-i18n="vis_val_6">Coherencia entre lo que enseñamos y cómo trabajamos</h3>
                         </div>
                     </div>
                 </div>
@@ -476,28 +478,28 @@
                 <div class="mt-32 relative -mx-6 md:-mx-12 lg:-mx-24 shadow-2xl">
                     <div class="bg-[#BBA182] py-24 px-6 md:px-24 text-white">
                          <div class="max-w-4xl mb-16">
-                            <h2 class="font-serif text-5xl md:text-6xl mb-6">Manifiesto Ético</h2>
+                            <h2 class="font-serif text-5xl md:text-6xl mb-6" data-i18n="vis_manif_title">Manifiesto Ético</h2>
                         </div>
                         <!-- Manifesto items -->
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-                            <div class="group"><span class="text-5xl font-serif opacity-40">01.</span><h4 class="text-xl font-bold mt-2 mb-3">Propósito Claro</h4><p class="text-sm opacity-80">Somos una respuesta al racismo, clasismo y la gentrificación.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">02.</span><h4 class="text-xl font-bold mt-2 mb-3">Accesibilidad Radical</h4><p class="text-sm opacity-80">El yoga no debe ser un lujo. Es un derecho al bienestar.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">03.</span><h4 class="text-xl font-bold mt-2 mb-3">Raíces Honradas</h4><p class="text-sm opacity-80">Reconocemos el linaje del yoga y lo adaptamos sin apropiarnos.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">04.</span><h4 class="text-xl font-bold mt-2 mb-3">Espacios Seguros</h4><p class="text-sm opacity-80">Creamos contenedores libres de juicio y competencia.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">05.</span><h4 class="text-xl font-bold mt-2 mb-3">Economía Solidaria</h4><p class="text-sm opacity-80">Nuestras ganancias se reinvierten en la comunidad.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">06.</span><h4 class="text-xl font-bold mt-2 mb-3">Bienestar Colectivo</h4><p class="text-sm opacity-80">Mi salud está ligada a la tuya. Nos cuidamos entre todes.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">07.</span><h4 class="text-xl font-bold mt-2 mb-3">Aprendizaje Continuo</h4><p class="text-sm opacity-80">Somos estudiantes eternos. Siempre hay algo nuevo que descubrir.</p></div>
-                            <div class="group"><span class="text-5xl font-serif opacity-40">08.</span><h4 class="text-xl font-bold mt-2 mb-3">Alegría Rebelde</h4><p class="text-sm opacity-80">En tiempos difíciles, el gozo es nuestra mayor resistencia.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">01.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_1_t">Propósito Claro</h4><p class="text-lg opacity-80" data-i18n="vis_manif_1_d">Somos una respuesta al racismo, clasismo y la gentrificación.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">02.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_2_t">Accesibilidad Radical</h4><p class="text-lg opacity-80" data-i18n="vis_manif_2_d">El yoga no debe ser un lujo. Es un derecho al bienestar.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">03.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_3_t">Raíces Honradas</h4><p class="text-lg opacity-80" data-i18n="vis_manif_3_d">Reconocemos el linaje del yoga y lo adaptamos sin apropiarnos.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">04.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_4_t">Espacios Seguros</h4><p class="text-lg opacity-80" data-i18n="vis_manif_4_d">Creamos contenedores libres de juicio y competencia.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">05.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_5_t">Economía Solidaria</h4><p class="text-lg opacity-80" data-i18n="vis_manif_5_d">Nuestras ganancias se reinvierten en la comunidad.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">06.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_6_t">Bienestar Colectivo</h4><p class="text-lg opacity-80" data-i18n="vis_manif_6_d">Mi salud está ligada a la tuya. Nos cuidamos entre todes.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">07.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_7_t">Aprendizaje Continuo</h4><p class="text-lg opacity-80" data-i18n="vis_manif_7_d">Somos estudiantes eternos. Siempre hay algo nuevo que descubrir.</p></div>
+                            <div class="group"><span class="text-5xl font-serif opacity-40">08.</span><h4 class="text-2xl font-bold mt-2 mb-3" data-i18n="vis_manif_8_t">Alegría Rebelde</h4><p class="text-lg opacity-80" data-i18n="vis_manif_8_d">En tiempos difíciles, el gozo es nuestra mayor resistencia.</p></div>
                             
                             <!-- Summary Block -->
                             <div class="group border-2 border-white/30 p-6 rounded-lg bg-white/5 md:col-span-2 lg:col-span-1">
                                 <span class="text-5xl font-serif opacity-100">Maka</span>
-                                <h4 class="text-xl font-bold mt-2 mb-3">No busca llenar, busca resonar.</h4>
-                                <p class="text-sm leading-relaxed font-light">No atraemos por imagen. El reto es crear grupos desde lo profundo, no desde el marketing.</p>
+                                <h4 class="text-xl font-bold mt-2 mb-3" data-i18n="vis_manif_summ_t">No busca llenar, busca resonar.</h4>
+                                <p class="text-sm leading-relaxed font-light" data-i18n="vis_manif_summ_d">No atraemos por imagen. El reto es crear grupos desde lo profundo, no desde el marketing.</p>
                             </div>
                         </div>
                          <div class="mt-16 text-center">
-                            <button data-link="contact" class="bg-white text-[#BBA182] px-10 py-4 rounded-full hover:bg-oaxaca-cream transition duration-300 font-bold text-xl shadow-lg">
+                            <button data-link="contact" class="bg-white text-[#BBA182] px-10 py-4 rounded-full hover:bg-oaxaca-cream transition duration-300 font-bold text-xl shadow-lg" data-i18n="vis_join_btn">
                                 Únete a nosotros
                             </button>
                         </div>
@@ -512,12 +514,12 @@
         <section class="py-12 md:py-20 px-4 md:px-8">
             <div class="max-w-5xl mx-auto">
                 <div class="mb-12">
-                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4" data-i18n="team_back">
                         &larr; Volver al inicio
                     </button>
                 </div>
                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4 mb-8">Nuestras Guías</h2>
+                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4 mb-8" data-i18n="team_title">Nuestras Guías</h2>
                 </div>
 
                 <div id="instructors-container" class="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto">
@@ -546,23 +548,23 @@
                         </div>
                     </div>
                     <div class="lg:col-span-7 flex flex-col justify-center h-full pt-4">
-                        <span id="instructor-style" class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-sm mb-4"></span>
-                        <h2 id="instructor-name" class="font-serif text-5xl md:text-7xl text-oaxaca-wood mb-8 leading-none"></h2>
-                        <div class="prose prose-lg text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
+                        <span id="instructor-style" class="font-sans uppercase tracking-widest text-oaxaca-clay font-bold text-base mb-4"></span>
+                        <h2 id="instructor-name" class="font-serif text-6xl md:text-8xl text-oaxaca-wood mb-8 leading-none"></h2>
+                        <div class="prose prose-xl text-oaxaca-text/80 mb-10 leading-relaxed font-light text-justify">
                             <p id="instructor-bio"></p>
                         </div>
                         <div class="bg-white/40 p-8 rounded-xl border-l-4 border-oaxaca-clay mb-10">
                             <i class="fas fa-quote-left text-oaxaca-clay/30 text-3xl mb-4 block"></i>
-                            <p id="instructor-quote" class="font-serif text-2xl text-oaxaca-wood italic mb-4"></p>
+                            <p id="instructor-quote" class="font-serif text-3xl text-oaxaca-wood italic mb-4"></p>
                         </div>
                         <div class="mb-12">
-                            <h4 class="font-bold text-oaxaca-wood text-lg mb-3">En sus clases encontrarás:</h4>
-                            <p id="instructor-class-desc" class="text-oaxaca-text/90 font-light"></p>
+                            <h4 class="font-bold text-oaxaca-wood text-xl mb-3" data-i18n="inst_class_label">En sus clases encontrarás:</h4>
+                            <p id="instructor-class-desc" class="text-oaxaca-text/90 text-xl font-light"></p>
                         </div>
                         <div>
                             <a id="instructor-whatsapp" href="#" target="_blank" class="inline-flex items-center px-8 py-4 border border-oaxaca-wood text-oaxaca-wood hover:bg-oaxaca-wood hover:text-[#F6E0B5] transition duration-300 rounded-full font-bold text-lg group">
                                 <i class="fab fa-whatsapp mr-3 text-xl"></i>
-                                Preguntar sobre esta clase
+                                <span data-i18n="inst_ask_btn">Preguntar sobre esta clase</span>
                             </a>
                         </div>
                     </div>
@@ -576,14 +578,14 @@
         <section class="py-12 md:py-20 px-6 md:px-12">
             <div class="max-w-6xl mx-auto">
                 <div class="mb-12">
-                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4" data-i18n="cont_back">
                         &larr; Volver al inicio
                     </button>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
                          <h2 class="font-sans font-light text-5xl md:text-7xl text-oaxaca-wood mb-8 leading-tight">
-                            Estamos aquí <br> <span class="font-serif italic font-bold">para ti.</span>
+                            <span data-i18n="cont_display_title">Estamos aquí</span> <br> <span class="font-serif italic font-bold" data-i18n="cont_display_subtitle">para ti.</span>
                         </h2>
                         <!-- Contact Details -->
                         <div class="space-y-8">
@@ -604,7 +606,7 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1">Escríbenos</h4>
+                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-1" data-i18n="cont_write_title">Escríbenos</h4>
                                     <a href="mailto:hola@makayoga.mx" class="text-oaxaca-text/80 hover:text-oaxaca-clay transition">hola@makayoga.mx</a>
                                 </div>
                             </div>
@@ -615,7 +617,7 @@
                                     <i class="fas fa-heart"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-3">Conecta</h4>
+                                    <h4 class="font-bold text-oaxaca-wood text-lg mb-3" data-i18n="cont_connect_title">Conecta</h4>
                                     <div class="flex space-x-6">
                                         <a href="https://wa.me/529513464383" target="_blank" class="text-oaxaca-text/60 hover:text-green-500 text-3xl transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
                                         <a href="#" target="_blank" class="text-oaxaca-text/60 hover:text-pink-500 text-3xl transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
@@ -646,36 +648,36 @@
         <section class="py-12 md:py-20 px-4 md:px-8">
             <div class="max-w-6xl mx-auto">
                 <div class="mb-12">
-                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4">
+                    <button data-link="home" class="text-oaxaca-clay hover:text-oaxaca-wood underline decoration-wavy underline-offset-4" data-i18n="sched_back">
                         &larr; Volver al inicio
                     </button>
                 </div>
                 <div class="text-center mb-16">
-                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4">Nuestros Horarios</h2>
+                    <h2 class="font-sans font-light text-5xl text-oaxaca-wood mt-4" data-i18n="sched_page_title">Nuestros Horarios</h2>
                 </div>
                 <div class="overflow-x-auto rounded-lg shadow-lg">
                     <table class="w-full text-left border-collapse border border-[#876848]/40">
                         <thead>
                             <tr class="bg-[#876848] text-white">
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Hora</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Lunes</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Martes</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Miércoles</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Jueves</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Viernes</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Sábado</th>
-                                <th class="p-4 font-serif text-xl font-normal border border-white/20">Domingo</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_col_time">Hora</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.mon">Lunes</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.tue">Martes</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.wed">Miércoles</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.thu">Jueves</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.fri">Viernes</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.sat">Sábado</th>
+                                <th class="p-4 font-serif text-xl font-normal border border-white/20" data-i18n="sched_days.sun">Domingo</th>
                             </tr>
                         </thead>
                         <tbody class="text-[#876848]">
                              <!-- 8:00 AM -->
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">8:00 am</td>
-                                <td class="p-4 border border-[#876848]/40">Alineamiento Restaurativo<br><span class="text-sm opacity-75">con Alosja</span></td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con Karina</span></td>
-                                <td class="p-4 border border-[#876848]/40">Alineamiento Restaurativo<br><span class="text-sm opacity-75">con Alosja</span></td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con Karina</span></td>
-                                <td class="p-4 border border-[#876848]/40">Alineamiento Restaurativo<br><span class="text-sm opacity-75">con Alosja</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="alosja"><span class="text-lg font-medium" data-i18n="cls_align">Alineamiento Restaurativo</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Alosja</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="alosja"><span class="text-lg font-medium" data-i18n="cls_align">Alineamiento Restaurativo</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Alosja</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="alosja"><span class="text-lg font-medium" data-i18n="cls_align">Alineamiento Restaurativo</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Alosja</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
@@ -687,7 +689,7 @@
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
                             <!-- 9:00 AM -->
@@ -699,16 +701,16 @@
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                             </tr>
                             <!-- 10:00 AM -->
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">10:00 am</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
-                                <td class="p-4 border border-[#876848]/40">Vinyasa somática<br><span class="text-sm opacity-75">con Phan</span></td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
-                                <td class="p-4 border border-[#876848]/40">Vinyasa somática<br><span class="text-sm opacity-75">con Phan</span></td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="phan"><span class="text-lg font-medium" data-i18n="cls_vinyasa_som">Vinyasa somática</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Phan</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="phan"><span class="text-lg font-medium" data-i18n="cls_vinyasa_som">Vinyasa somática</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Phan</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
@@ -716,9 +718,9 @@
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">4:00 pm</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
@@ -726,11 +728,11 @@
                             <!-- 5:00 PM -->
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">5:00 pm</td>
-                                <td class="p-4 border border-[#876848]/40">Vinyasa<br><span class="text-sm opacity-75">con Paty</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="paty"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Paty</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Vinyasa<br><span class="text-sm opacity-75">con Paty</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="paty"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Paty</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Vinyasa<br><span class="text-sm opacity-75">con Paty</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="paty"><span class="text-lg font-medium" data-i18n="cls_vinyasa">Vinyasa</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Paty</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
@@ -738,9 +740,9 @@
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">5:30 pm</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Yin Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_yin">Yin Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Yin Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_yin">Yin Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
@@ -748,11 +750,11 @@
                             <!-- 6:30 PM -->
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">6:30 pm</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga<br><span class="text-sm opacity-75">con María</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="maria"><span class="text-lg font-medium" data-i18n="cls_hatha">Hatha Yoga</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> María</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                             </tr>
@@ -760,9 +762,9 @@
                             <tr class="bg-[#F6E0B5]">
                                 <td class="p-4 font-bold opacity-80 border border-[#876848]/40">7:00 pm</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga suave<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_hatha_gentle">Hatha Yoga suave</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
-                                <td class="p-4 border border-[#876848]/40">Hatha Yoga suave<br><span class="text-sm opacity-75">con Karina</span></td>
+                                <td class="p-4 border border-[#876848]/40 cursor-pointer hover:bg-black/5 transition duration-300 ring-inset" data-instructor="karina"><span class="text-lg font-medium" data-i18n="cls_hatha_gentle">Hatha Yoga suave</span><br><span class="text-base opacity-75"><span data-i18n="cls_with">con</span> Karina</span></td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
                                 <td class="p-4 text-center opacity-50 border border-[#876848]/40">-</td>
@@ -792,7 +794,7 @@
                             <img src="assets/espacio/1.jpg" alt="Patio y jardín" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Patio y jardín</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_1">Patio y jardín</p>
                     </div>
 
                     <!-- Imagen 2 -->
@@ -801,7 +803,7 @@
                             <img src="assets/espacio/2.jpg" alt="Práctica de asanas" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Práctica de asanas</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_2">Práctica de asanas</p>
                     </div>
 
                     <!-- Imagen 3 -->
@@ -810,7 +812,7 @@
                             <img src="assets/espacio/3.jpg" alt="Yoga restaurativo" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Yoga restaurativo</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_3">Yoga restaurativo</p>
                     </div>
 
                     <!-- Imagen 4 -->
@@ -819,7 +821,7 @@
                             <img src="assets/espacio/4.jpg" alt="Inversiones y fuerza" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Inversiones y fuerza</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_4">Inversiones y fuerza</p>
                     </div>
 
                     <!-- Imagen 5 -->
@@ -828,7 +830,7 @@
                             <img src="assets/espacio/5.jpg" alt="Estiramiento al sol" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Estiramiento al sol</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_5">Estiramiento al sol</p>
                     </div>
 
                     <!-- Imagen 6 -->
@@ -837,7 +839,7 @@
                             <img src="assets/espacio/6.jpg" alt="Mensajes intencionales" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Mensajes intencionales</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_6">Mensajes intencionales</p>
                     </div>
 
                     <!-- Imagen 7 -->
@@ -846,7 +848,7 @@
                             <img src="assets/espacio/7.jpg" alt="Clase grupal" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Clase grupal</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_7">Clase grupal</p>
                     </div>
 
                     <!-- Imagen 8 -->
@@ -855,7 +857,7 @@
                             <img src="assets/espacio/8.jpg" alt="Detalles con alma" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Detalles con alma</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_8">Detalles con alma</p>
                     </div>
 
                     <!-- Imagen 9 -->
@@ -864,7 +866,7 @@
                             <img src="assets/espacio/9.jpg" alt="Conexión exterior" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Conexión exterior</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_9">Conexión exterior</p>
                     </div>
 
                     <!-- Imagen 10 -->
@@ -873,7 +875,7 @@
                             <img src="assets/espacio/10.jpg" alt="Gesto e introspección" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Gesto e introspección</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_10">Gesto e introspección</p>
                     </div>
 
                     <!-- Imagen 11 -->
@@ -882,7 +884,7 @@
                             <img src="assets/espacio/11.jpg" alt="Un refugio sencillo" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Un refugio sencillo</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_11">Un refugio sencillo</p>
                     </div>
 
                     <!-- Imagen 12 -->
@@ -891,7 +893,7 @@
                             <img src="assets/espacio/12.jpg" alt="Rincón espiritual" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Rincón espiritual</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_12">Rincón espiritual</p>
                     </div>
 
                     <!-- Imagen 13 -->
@@ -900,7 +902,7 @@
                             <img src="assets/espacio/13.jpg" alt="Un refugio seguro" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Un refugio seguro</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_13">Un refugio seguro</p>
                     </div>
 
                     <!-- Imagen 14 -->
@@ -909,7 +911,7 @@
                             <img src="assets/espacio/14.jpg" alt="Meditación y quietud" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Meditación y quietud</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_14">Meditación y quietud</p>
                     </div>
 
                     <!-- Imagen 15 -->
@@ -918,11 +920,11 @@
                             <img src="assets/espacio/15.jpg" alt="Horarios flexibles" class="w-full object-cover">
                             <div class="absolute inset-0 bg-oaxaca-wood/0 group-hover:bg-oaxaca-wood/10 transition-colors duration-300"></div>
                         </div>
-                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center">Horarios flexibles</p>
+                        <p class="mt-3 font-serif text-xl text-oaxaca-text/70 text-center" data-i18n="space_img_15">Horarios flexibles</p>
                     </div>
                 </div>
                  <div class="mt-16 text-center">
-                    <button data-link="contact" class="bg-oaxaca-clay text-white px-10 py-4 rounded-full hover:bg-oaxaca-wood transition duration-300 font-bold text-xl shadow-lg">
+                    <button data-link="contact" class="bg-oaxaca-clay text-white px-10 py-4 rounded-full hover:bg-oaxaca-wood transition duration-300 font-bold text-xl shadow-lg" data-i18n="space_book_class">
                         Reserva tu clase
                     </button>
                 </div>

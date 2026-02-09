@@ -1,5 +1,6 @@
 import { navigateTo } from './router.js';
 import { instructorsData } from './data.js';
+import { languageManager } from './i18n/languageManager.js';
 
 export function initUI() {
     initMobileMenu();
@@ -10,13 +11,21 @@ export function initUI() {
     initScrollEffects();
     initRandomInstructors();
     initInstructors();
+    
+    // Listen for language changes
+    document.addEventListener('languageChanged', () => {
+        initRandomInstructors();
+        // Check if instructor modal is open and update it if possible
+        // We would need to store the current open instructor key.
+        // For now, let's just update the grid items.
+    });
 }
 
 function initRandomInstructors() {
     const container = document.getElementById('instructors-container');
     if (!container) return; // Guard clause if container doesn't exist yet
 
-    const instructorKeys = ['maria', 'alosja', 'elena', 'karina', 'paty'];
+    const instructorKeys = ['maria', 'alosja', 'phan', 'karina', 'paty'];
     
     // Shuffle
     instructorKeys.sort(() => Math.random() - 0.5);
@@ -25,13 +34,26 @@ function initRandomInstructors() {
     instructorKeys.forEach(key => {
         const data = instructorsData[key];
         if (data) {
+            let imageHtml;
+            if (data.image) {
+                imageHtml = `<img src="${data.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">`;
+            } else {
+                imageHtml = `
+                    <div class="w-full h-full bg-oaxaca-cream flex items-center justify-center">
+                        <span class="font-serif text-6xl text-oaxaca-clay opacity-50 select-none">${data.name.charAt(0)}</span>
+                    </div>
+                `;
+            }
+
             html += `
                 <div class="text-center group cursor-pointer" data-instructor="${key}">
                     <div class="w-48 h-48 rounded-full overflow-hidden mb-6 mx-auto border-4 border-transparent group-hover:border-oaxaca-clay transition duration-300 shadow-lg">
-                        <img src="${data.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        ${imageHtml}
                     </div>
-                    <h3 class="font-serif text-2xl text-oaxaca-wood">${data.name}</h3>
-                    <p class="text-[#876848] font-light mt-1 uppercase tracking-wide text-sm">${data.style}</p>
+                    <h3 class="font-serif text-3xl text-oaxaca-wood">${data.name}</h3>
+                    <p class="text-[#876848] font-light mt-1 uppercase tracking-wide text-base">${
+                        languageManager.getCurrentLang() === 'en' ? (data.style_en || data.style) : data.style
+                    }</p>
                 </div>
             `;
         }
@@ -219,13 +241,33 @@ function openInstructor(key) {
     const data = instructorsData[key];
     if (!data) return;
 
+    const lang = languageManager.getCurrentLang();
+    
     document.getElementById('instructor-name').textContent = data.name;
-    document.getElementById('instructor-style').textContent = data.style;
-    document.getElementById('instructor-bio').innerHTML = data.bio;
-    document.getElementById('instructor-quote').innerHTML = `"${data.quote}"`;
-    document.getElementById('instructor-class-desc').innerHTML = data.classDesc;
-    document.getElementById('instructor-img').src = data.image;
-    document.getElementById('instructor-img').alt = data.name;
+    document.getElementById('instructor-style').textContent = lang === 'en' ? (data.style_en || data.style) : data.style;
+    document.getElementById('instructor-bio').innerHTML = lang === 'en' ? (data.bio_en || data.bio) : data.bio;
+    document.getElementById('instructor-quote').innerHTML = `"${lang === 'en' ? (data.quote_en || data.quote) : data.quote}"`;
+    document.getElementById('instructor-class-desc').innerHTML = lang === 'en' ? (data.classDesc_en || data.classDesc) : data.classDesc;
+    
+    const imgEl = document.getElementById('instructor-img');
+    const parentEl = imgEl.parentElement;
+    
+    // Remove existing placeholder if any
+    const existingPlaceholder = parentEl.querySelector('.placeholder-initial');
+    if (existingPlaceholder) existingPlaceholder.remove();
+
+    if (data.image) {
+        imgEl.src = data.image;
+        imgEl.classList.remove('hidden');
+    } else {
+        imgEl.classList.add('hidden');
+        const div = document.createElement('div');
+        div.className = 'placeholder-initial w-full h-full bg-oaxaca-cream flex items-center justify-center';
+        div.innerHTML = `<span class="font-serif text-9xl text-oaxaca-clay opacity-50 select-none">${data.name.charAt(0)}</span>`;
+        parentEl.appendChild(div);
+    }
+    
+    imgEl.alt = data.name;
 
     const message = `Hola, quisiera información sobre las clases de ${data.style} con ${data.name}.`;
     const whatsappUrl = `https://wa.me/${data.phone}?text=${encodeURIComponent(message)}`;
@@ -248,13 +290,12 @@ function initLightbox() {
 
     galleryItems.forEach((item, index) => {
         const img = item.querySelector('img');
-        const caption = item.querySelector('p')?.textContent || "";
         
         if(img) {
             lightboxImages.push({
                 src: img.src,
                 alt: img.alt,
-                caption: caption
+                element: item
             });
 
             item.addEventListener('click', () => openLightbox(index));
@@ -283,7 +324,7 @@ function initLightbox() {
         const data = lightboxImages[lightboxIndex];
         lightboxImg.src = data.src;
         lightboxImg.alt = data.alt;
-        lightboxCaption.textContent = data.caption;
+        lightboxCaption.textContent = data.element.querySelector('p')?.textContent || "";
     }
 
     function nextImage(e) {
