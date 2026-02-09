@@ -14,6 +14,7 @@ export function initUI() {
     initScrollEffects();
     initRandomInstructors();
     initInstructors();
+    initAudioTestimonials();
     
     // Listen for language changes
     document.addEventListener('languageChanged', () => {
@@ -394,4 +395,20 @@ function initLightbox() {
         if (touchEndX < touchStartX - 50) nextImage(); // Swipe Left -> Next
         if (touchEndX > touchStartX + 50) prevImage(); // Swipe Right -> Prev
     }
+}
+
+// Audio testimonials - only one plays at a time
+function initAudioTestimonials() {
+    const audioElements = document.querySelectorAll('.audio-testimonial');
+    
+    audioElements.forEach(audio => {
+        audio.addEventListener('play', () => {
+            // Pause all other audio elements when this one starts playing
+            audioElements.forEach(other => {
+                if (other !== audio) {
+                    other.pause();
+                }
+            });
+        });
+    });
 }

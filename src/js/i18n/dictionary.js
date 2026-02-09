@@ -56,11 +56,13 @@ export const translations = {
     "voice_rutilo": { es: "Gracias Rutilo por compartirnos tu voz", en: "Thank you Rutilo for sharing your voice" },
     "voice_isa": { es: "Gracias Isa por compartirnos tu voz", en: "Thank you Isa for sharing your voice" },
     "voice_daniel": { es: "Gracias Daniel por compartirnos tu voz", en: "Thank you Daniel for sharing your voice" },
-    "voice_araceli": { es: "Gracias Araceli por compartirnos tu voz", en: "Thank you Araceli for sharing your voice" },
+    "voice_araceli": { es: "Gracias Vivi por compartirnos tu voz", en: "Thank you Vivi for sharing your voice" },
     "test_back": { es: "← Volver al inicio", en: "← Back to home" },
     "google_reviews_label": { es: "Reseñas de Google", en: "Google Reviews" },
     "google_reviews_count": { es: "Basado en 19 reseñas", en: "Based on 19 reviews" },
     "google_reviews_cta": { es: "Ver reseñas", en: "View reviews" },
+    "audio_invite_title": { es: "Te invitamos a escuchar", en: "We invite you to listen" },
+    "audio_invite_subtitle": { es: "testimonios de nuestras alumnas y alumnos", en: "testimonials from our students" },
 
     // Footer / Details Info
     "loc_title": { es: "Ubicación", en: "Location" },
