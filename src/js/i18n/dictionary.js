@@ -5,6 +5,7 @@ export const translations = {
     "nav_schedule": { es: "Horarios", en: "Schedule" },
     "nav_space": { es: "Espacio", en: "Space" },
     "nav_contact": { es: "Contacto", en: "Contact" },
+    "nav_testimonios": { es: "Testimonios", en: "Reviews" },
 
     // Hero
     "hero_title": { es: "Un refugio seguro", en: "A safe refuge" },
@@ -56,6 +57,10 @@ export const translations = {
     "voice_isa": { es: "Gracias Isa por compartirnos tu voz", en: "Thank you Isa for sharing your voice" },
     "voice_daniel": { es: "Gracias Daniel por compartirnos tu voz", en: "Thank you Daniel for sharing your voice" },
     "voice_araceli": { es: "Gracias Araceli por compartirnos tu voz", en: "Thank you Araceli for sharing your voice" },
+    "test_back": { es: "← Volver al inicio", en: "← Back to home" },
+    "google_reviews_label": { es: "Reseñas de Google", en: "Google Reviews" },
+    "google_reviews_count": { es: "Basado en 19 reseñas", en: "Based on 19 reviews" },
+    "google_reviews_cta": { es: "Ver reseñas", en: "View reviews" },
 
     // Footer / Details Info
     "loc_title": { es: "Ubicación", en: "Location" },
