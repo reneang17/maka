@@ -209,7 +209,7 @@ export const translations = {
     "space_back": { es: "&larr; Volver al inicio", en: "&larr; Back to home" },
     "space_intro": { 
         es: "Brindamos un studio de yoga muy limpio, decorado amorosamente y muy bien equipado. También un pequeño jardín para convivir y tomar clases al aire libre. Mantener este espacio en el corazón de la ciudad no ha sido siempre facil pero aún así nos las arreglamos para ayudar a estudiantes, madres autónomas y algunos otros apoyos.", 
-        en: "We offer a very clean yoga studio, lovingly decorated and well-equipped. We also have a small garden and patio that we enjoy for socializing. Keeping this space in the heart of the city hasn't always been easy, but we still manage to support students, single mothers, and others in need." 
+        en: "We offer a very clean yoga studio, lovingly decorated and well-equipped. We also have a small garden for socializing and taking outdoor classes. Keeping this space in the heart of the city hasn't always been easy, but we still manage to support students, single mothers, and others in need." 
     },
 
     "space_book_class": { es: "Reserva tu clase", en: "Book your class" },
