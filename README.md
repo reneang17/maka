@@ -9,6 +9,23 @@ A modern, responsive web application for Maka Yoga studio in Oaxaca, built with 
 - **Tailwind CSS**: Utility-first CSS framework for rapid and responsive styling.
 - **Font Awesome**: Icon library for visual elements.
 
+## 🧘‍♀️ About the Project
+
+This project was commissioned for **MAKA Yoga**, an excellent yoga studio located in the heart of **Oaxaca City**. It was designed to reflect the studio's serene and welcoming atmosphere while providing a seamless user experience for students to check schedules and learn about the instructors.
+
+## 🎨 Design & Screenshots
+
+The design focuses on a clean, calming aesthetic with glassmorphism effects and smooth transitions.
+
+### Hero Section
+![Hero Section](public/screenshots/hero.png)
+
+### Our Instructors
+![Instructors Section](public/screenshots/instructors.png)
+
+### Schedule
+![Schedule Section](public/screenshots/schedule.png)
+
 ## ✨ Features
 
 - **Single Page Application (SPA) Experience**: Smooth navigation without full page reloads using a custom vanilla JS router.
