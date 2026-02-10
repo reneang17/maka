@@ -21,7 +21,6 @@ export function initUI() {
     document.addEventListener('languageChanged', () => {
         initRandomInstructors();
         initInstructors(); // Re-attach event listeners after DOM update
-        updateInstructorContent(); // Update instructor page if currently open
     });
 }
 
