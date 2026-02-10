@@ -1,47 +1,80 @@
-# Maka Yoga Website
+# Maka Yoga | Oaxaca
 
-This project is a migration of the Maka Yoga static site to a professional development setup using **Vite**, **Vanilla JavaScript**, and **Tailwind CSS**.
+A modern, responsive web application for Maka Yoga studio in Oaxaca, built with performance, accessibility, and community in mind.
 
-## Structure
+## 🚀 Tech Stack
 
-- **src/main.js**: Application entry point.
-- **src/style.css**: Global styles and Tailwind imports.
-- **src/js/**: Modular JavaScript logic.
-    - `router.js`: Handles single-page navigation logic without page reloads.
-    - `data.js`: Contains data for instructors.
-    - `ui.js`: Manages UI interactions (Carousels, Mobile Menu, Lightbox).
-- **index.html**: Main HTML file.
-- **public/**: Static assets (images, logos).
+- **Vite**: Ultra-fast build tool and development server.
+- **Vanilla JavaScript**: Core logic without heavy framework overhead.
+- **Tailwind CSS**: Utility-first CSS framework for rapid and responsive styling.
+- **Font Awesome**: Icon library for visual elements.
 
-## Getting Started
+## ✨ Features
+
+- **Single Page Application (SPA) Experience**: Smooth navigation without full page reloads using a custom vanilla JS router.
+- **Internationalization (i18n)**: Full support for Spanish (default) and English, with seamless toggling.
+- **Responsive Design**: Mobile-first approach ensuring a great experience on all devices.
+- **Dynamic Content**: Instructor profiles and other data are loaded dynamically from structured data files.
+- **Modern UI/UX**:
+    - Smooth scrolling and transitions.
+    - Glassmorphism effects (backdrop blur).
+    - Custom carousel for hero images and testimonials.
+    - Interactive lightbox for gallery images.
+
+## 📂 Project Structure
+
+```
+.
+├── src/
+│   ├── js/
+│   │   ├── i18n/           # Internationalization logic and dictionaries
+│   │   ├── router.js       # SPA-like routing logic
+│   │   ├── ui.js           # UI interactions (Navbar, Mobile Menu, Carousels)
+│   │   ├── data.js         # Static data (Instructors, etc.)
+│   │   └── main.js         # Application entry point
+│   ├── style.css           # Global styles and Tailwind directives
+├── public/                 # Static assets (images, logos)
+├── idx.html                # Main HTML entry file
+├── vite.config.js          # Vite configuration
+└── tailwind.config.js      # Tailwind configuration
+```
+
+## 🛠️ Getting Started
 
 ### Prerequisites
 
-- Node.js installed on your machine.
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- npm (comes with Node.js)
 
 ### Installation
 
-1. Install dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/reneang17/maka.git
+   cd maka
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
 
-3. Open your browser at the URL provided (usually `http://localhost:5173`).
+4. Open your browser at the URL provided (usually `http://localhost:5173`).
 
-### Building for Production
+## 📦 Building for Production
 
-To create a production build:
+To create an optimized production build:
 
 ```bash
 npm run build
 ```
 
-This will generate a `dist/` specific folder with optimized assets ready for deployment.
+The output will be in the `dist/` directory, ready for deployment.
 
 ### Preview Production Build
 
@@ -50,3 +83,14 @@ To preview the production build locally:
 ```bash
 npm run preview
 ```
+
+## 🌐 Deployment
+
+This project is configured for deployment on **GitHub Pages**.
+
+- The `CNAME` file in the root directory ensures the custom domain `makayoga.space` is correctly configured.
+- The build process handles asset optimization and hashing for caching.
+
+## 📄 License
+
+[MIT License](LICENSE)
