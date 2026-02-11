@@ -233,7 +233,7 @@ function initScrollEffects() {
 
 function initInstructors() {
     // Temporarily disabled instructor profiles (still being worked on)
-    const disabledProfiles = ['phan', 'alosja'];
+    const disabledProfiles = ['phan'];
     
     document.querySelectorAll('[data-instructor]').forEach(item => {
         const key = item.getAttribute('data-instructor');
