@@ -138,14 +138,7 @@ export const translations = {
     "class_view_profile": { es: "Ver perfil de la guía", en: "View instructor profile" },
     "class_ask_availability": { es: "Preguntar por disponibilidad", en: "Ask about availability" },
 
-    // Instructor - Alosja
-    "inst_alosja_style": { es: "Alineamiento Restaurativo", en: "Restorative Alignment" },
-    "inst_alosja_class_title": { es: "Sobre mis clases", en: "About my classes" },
-    "inst_alosja_class_intro": { es: "Mis clases están basadas en las siguientes dos disciplinas:", en: "My classes are based on the following two disciplines:" },
-    "inst_alosja_rest_title": { es: "🧘‍♀️ Yoga Restaurativo", en: "🧘‍♀️ Restorative Yoga" },
-    "inst_alosja_rest_text": { es: "Esta práctica se enfoca profundamente en calmar el sistema nervioso. Utilizamos posturas muy cómodas y pasivas que se sostienen durante un tiempo prolongado. El objetivo principal no es el esfuerzo físico, sino permitir que el cuerpo entre en un estado de relajación profunda, brindando quietud y tranquilidad a la mente. Es una pausa necesaria para restaurar tu energía desde la suavidad.", en: "This practice focuses deeply on calming the nervous system. We use very comfortable and passive postures that are held for a long time. The main goal is not physical effort, but allowing the body to enter a state of deep relaxation, bringing stillness and tranquility to the mind. It is a necessary pause to restore your energy from softness." },
-    "inst_alosja_align_title": { es: "🧘‍♀️ Alineación Restaurativa", en: "🧘‍♀️ Restorative Alignment" },
-    "inst_alosja_align_text": { es: "A diferencia del yoga restaurativo puro, aquí combinamos el uso de apoyos (como bolsters o cintas) con posturas más dinámicas (de pie, flexiones y extensiones). El enfoque principal es la estructura: buscamos crear conciencia y movilidad, especialmente en la espalda media, los omóplatos y su conexión con los brazos.<br>Trabajamos bajo el principio de que \"la estructura da apertura\": al alinear correctamente los huesos y evitar el colapso (como en los hombros), creamos espacio interno para respirar mejor y sentir ligereza. No siempre es fácil, pero es una práctica poderosa para liberar tensión, mejorar la articulación de la columna y beneficiar al sistema nervioso a través del movimiento consciente.", en: "Unlike pure restorative yoga, here we combine the use of props (such as bolsters or straps) with more dynamic postures (standing, forward bends, and extensions). The main focus is structure: we seek to create awareness and mobility, especially in the mid-back, shoulder blades, and their connection to the arms.<br>We work under the principle that \"structure gives opening\": by correctly aligning the bones and avoiding collapse (as in the shoulders), we create internal space to breathe better and feel lightness. It is not always easy, but it is a powerful practice to release tension, improve spinal articulation, and benefit the nervous system through conscious movement." },
+
 
     // Instructor - María
     "inst_maria_style": { es: "Hatha Yoga & Yin Yoga", en: "Hatha Yoga & Yin Yoga" },
@@ -175,10 +168,22 @@ export const translations = {
     "inst_karina_bio_4": { es: "Intento mantener ese toque con quienes comparten su presencia en mis clases.<br>Esto es experimental y el yoga es solo una herramienta más entre muchas otras donde puedes encontrar tu refugio.", en: "I try to keep that touch with those who share their presence in my classes.<br>This is experimental and yoga is just one more tool among many others where you can find your refuge." },
 
     // Instructor - Phan
-    "inst_phan_style": { es: "Vinyasa somática", en: "Somatic Vinyasa" },
-    "inst_phan_bio": { es: "Descubrí el yoga restaurativo como una herramienta de sanación profunda para el sistema nervioso. Mi misión es crear espacios de descanso radical en un mundo que glorifica la prisa constante.", en: "I discovered restorative yoga as a tool for deep healing of the nervous system. My mission is to create spaces of radical rest in a world that glorifies constant rush." },
-    "inst_phan_quote": { es: "En el descanso compartido encontramos la fuerza para sostenernos mutuamente. Sostener comunidad es permitirnos ser vulnerables y descansar juntos.", en: "In shared rest we find the strength to hold each other. Holding community is allowing ourselves to be vulnerable and rest together." },
-    "inst_phan_class_desc": { es: "Posturas sostenidas por largos periodos con el apoyo total de props (cojines, mantas, bloques) para inducir una relajación profunda y restaurar la energía vital.", en: "Postures held for long periods with full support of props (cushions, blankets, blocks) to induce deep relaxation and restore vital energy." },
+    "inst_phan_style": { es: "Somatic Vinyasa / Somatic Asana", en: "Somatic Vinyasa / Somatic Asana" },
+    
+    "inst_phan_class_title": { es: "Sobre la clase", en: "About the class" },
+    "inst_phan_class_intro": { es: "Es una práctica de movimiento consciente que fusiona el yoga con educación somática, ayudándonos a reconectar profundamente con nuestro soma.", en: "It is a practice of conscious movement that fuses yoga with somatic education, helping us reconnect deeply with our soma." },
+    "inst_phan_class_soma_title": { es: "Soma o somático:", en: "Soma or somatic:" },
+    "inst_phan_class_soma_text": { es: "No se refiere solo al cuerpo físico, sino a la totalidad de nuestro ser: espíritu, mente, cuerpo, emociones y fisiología. En cada clase, mediante movimientos y respiración, yoga somatico busca regresar a un cuerpo vivo, habitándolo con presencia y consciencia diluyendo esas emociones retenidas para poder sentirnos en totalidad.", en: "It refers not only to the physical body, but to the totality of our being: spirit, mind, body, emotions, and physiology. In each class, through movement and breathing, somatic yoga seeks to return to a living body, inhabiting it with presence and consciousness, diluting those retained emotions to be able to feel ourselves in totality." },
+    "inst_phan_class_outro": { es: "Cada sesión se convierte en una meditación profunda en movimiento, liberando tensiones y patrones en el sistema nervioso, transformando nuestra percepción de quiénes somos y de lo que es posible.", en: "Each session becomes a deep meditation in movement, releasing tensions and patterns in the nervous system, transforming our perception of who we are and what is possible." },
+
+    "inst_phan_about_title": { es: "Sobre mí", en: "About me" },
+    "inst_phan_bio_role": { es: "Sexological Bodyworker, Yoga con enfoque Somático.", en: "Sexological Bodyworker, Yoga with Somatic approach." },
+    "inst_phan_bio_quote": { es: "\"Parte importante de mi caminar es el dejar huellas. Me pongo al servicio de otras mujeres como yo que han decidido ser valientes y fuertes, autonomas, revolucionarias, dueñas de su placer. Retomando la conexión con nuestros cuerpos, liberándonos de las violencias tan comunes que existen hacia nuestro género. Soltando las ataduras del trauma y limitantes no solo por nosotras, sino por nuestras ancestras que caminaron con sus propios retos para que nosotras ahora podamos volar.\"", en: "\"An important part of my path is leaving footprints. I place myself at the service of other women like me who have decided to be brave and strong, autonomous, revolutionary, owners of their pleasure. Resuming the connection with our bodies, freeing ourselves from the violence so common towards our gender. Releasing the bonds of trauma and limits not only for ourselves, but for our ancestors who walked with their own challenges so that we can now fly.\"" },
+    
+    "inst_phan_bio_exp_1": { es: "Con 10 años de práctica de Asana. Se ha formado en Tantra Vinyasa, en su tiempo viviendo en Egipto estudió sobre Yoga Nidra y Meditación. También es estudiante de estilos modernos como Prana Flow.", en: "With 10 years of Asana practice. She has trained in Tantra Vinyasa, during her time living in Egypt she studied Yoga Nidra and Meditation. She is also a student of modern styles like Prana Flow." },
+    "inst_phan_bio_exp_2": { es: "Se formó en Brasil en el Instituto Latinoamericano de Sexología Somática.", en: "She trained in Brazil at the Latin American Institute of Somatic Sexology." },
+    
+    "inst_phan_quote_footer": { es: "Me gusta ayudar a las personas a vivir en Placer.", en: "I like helping people live in Pleasure." },
 
     // Schedule
     "sched_back": { es: "&larr; Volver al inicio", en: "&larr; Back to home" },
@@ -199,7 +204,7 @@ export const translations = {
         "sun": { es: "Domingo", en: "Sunday" }
     },
     // Classes
-    "cls_align": { es: "Alineamiento Restaurativo", en: "Restorative Alignment" },
+
     "cls_hatha": { es: "Hatha Yoga", en: "Hatha Yoga" },
     "cls_hatha_gentle": { es: "Hatha Yoga suave", en: "Gentle Hatha Yoga" },
     "cls_vinyasa_som": { es: "Vinyasa somática", en: "Somatic Vinyasa" },

@@ -28,7 +28,7 @@ function initRandomInstructors() {
     const container = document.getElementById('instructors-container');
     if (!container) return; // Guard clause if container doesn't exist yet
 
-    const instructorKeys = ['maria', 'alosja', 'phan', 'karina', 'paty'];
+    const instructorKeys = ['maria', 'phan', 'karina', 'paty'];
     
     // Shuffle
     instructorKeys.sort(() => Math.random() - 0.5);
@@ -233,7 +233,7 @@ function initScrollEffects() {
 
 function initInstructors() {
     // Temporarily disabled instructor profiles (still being worked on)
-    const disabledProfiles = ['phan'];
+    const disabledProfiles = [];
     
     document.querySelectorAll('[data-instructor]').forEach(item => {
         const key = item.getAttribute('data-instructor');
