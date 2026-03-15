@@ -12,7 +12,19 @@ export const instructorsData = {
         classDesc_en: 'A safe and inclusive space where we unite yoga and science to regulate your nervous system and strengthen your real body, adapting to your age and condition. I seek to offer functional tools for mobility, strength, and breathing to manage stress, relieve tension, and live without pain.',
         phone: '529513464383'
     },
-
+    'alosja': {
+        name: 'Alosja',
+        style: 'Alineamiento Restaurativo',
+        style_en: 'Restorative Alignment',
+        image: 'assets/instructoras/Alosja.jpg',
+        bio: 'Mis clases están basadas en las siguientes dos disciplinas:<br><br><strong>🧘‍♀️ Yoga Restaurativo</strong><br>Esta práctica se enfoca profundamente en calmar el sistema nervioso. Utilizamos posturas muy cómodas y pasivas que se sostienen durante un tiempo prolongado. El objetivo principal no es el esfuerzo físico, sino permitir que el cuerpo entre en un estado de relajación profunda, brindando quietud y tranquilidad a la mente. Es una pausa necesaria para restaurar tu energía desde la suavidad.<br><br><strong>🧘‍♀️ Alineación Restaurativa</strong><br>A diferencia del yoga restaurativo puro, aquí combinamos el uso de apoyos (como bolsters o cintas) con posturas más dinámicas (de pie, flexiones y extensiones). El enfoque principal es la estructura: buscamos crear conciencia y movilidad, especialmente en la espalda media, los omóplatos y su conexión con los brazos.<br>Trabajamos bajo el principio de que "la estructura da apertura": al alinear correctamente los huesos y evitar el colapso (como en los hombros), creamos espacio interno para respirar mejor y sentir ligereza. No siempre es fácil, pero es una práctica poderosa para liberar tensión, mejorar la articulación de la columna y beneficiar al sistema nervioso a través del movimiento consciente.',
+        bio_en: 'My classes are based on the following two disciplines:<br><br><strong>🧘‍♀️ Restorative Yoga</strong><br>This practice focuses deeply on calming the nervous system. We use very comfortable and passive postures that are held for a long time. The main goal is not physical effort, but allowing the body to enter a state of deep relaxation, bringing stillness and tranquility to the mind. It is a necessary pause to restore your energy from softness.<br><br><strong>🧘‍♀️ Restorative Alignment</strong><br>Unlike pure restorative yoga, here we combine the use of props (such as bolsters or straps) with more dynamic postures (standing, forward bends, and extensions). The main focus is structure: we seek to create awareness and mobility, especially in the mid-back, shoulder blades, and their connection to the arms.<br>We work under the principle that "structure gives opening": by correctly aligning the bones and avoiding collapse (as in the shoulders), we create internal space to breathe better and feel lightness. It is not always easy, but it is a powerful practice to release tension, improve spinal articulation, and benefit the nervous system through conscious movement.',
+        quote: '',
+        quote_en: '',
+        classDesc: '',
+        classDesc_en: '',
+        phone: '529513464383'
+    },
     'phan': {
         name: 'Phan',
         style: 'Somatic Vinyasa / Somatic Asana',
