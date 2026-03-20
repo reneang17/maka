@@ -8,6 +8,6 @@ window.languageManager = languageManager;
 
 document.addEventListener('DOMContentLoaded', () => {
     languageManager.init();
-    initRouter();
     initUI();
+    initRouter();
 });

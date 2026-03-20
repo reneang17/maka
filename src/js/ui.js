@@ -478,10 +478,8 @@ function showClassOptionsModal(instructorKey, cellElement, hideProfile = false) 
         profileBtn.querySelector('span').textContent = viewProfileText;
     }
     
-    // Setup WhatsApp link
-    const message = lang === 'en' 
-        ? `Hi, I'd like to ask about availability for the ${className} class with ${data.name}`
-        : `Hola, quisiera preguntar por disponibilidad para la clase de ${className} con ${data.name}`;
+    // Setup WhatsApp link (Always in Spanish for the receptionist)
+    const message = `Hola, quisiera preguntar por disponibilidad para la clase de ${className} con ${data.name}`;
     whatsappLink.href = `https://wa.me/${data.phone}?text=${encodeURIComponent(message)}`;
     
     // Show modal

@@ -239,4 +239,7 @@ export const translations = {
     "cont_visit_title": { es: "Visítanos", en: "Visit us" },
     "cont_write_title": { es: "Escríbenos", en: "Write to us" },
     "cont_connect_title": { es: "Conecta", en: "Connect" },
+
+    // Global
+    "whatsapp_float": { es: "¡Escríbenos!", en: "Message us!" }
 };
