@@ -176,31 +176,13 @@ export const translations = {
     "inst_karina_bio_3": { es: "Entre el ajetreo de ocupaciones, sentí que debía continuar por mi bien. Entonces continué tomando clases y encontré una fortuna, haber llegado a instructores que, más allá de la postura me ayudaron a interiorizar, fue un ¡bum! para mí, con el tiempo me di cuenta que más que encontrar un espacio físico para asistir a tomar clases, era el pretexto perfecto para entrar en mi espacio interior, encontrando un refugio.", en: "Between the hustle of occupations, I felt I had to continue for my own good. So I continued taking classes and found a fortune, having reached instructors who, beyond the posture helped me internalize, it was a boom! for me, with time I realized that more than finding a physical space to attend classes, it was the perfect pretext to enter my inner space, finding a refuge." },
     "inst_karina_bio_4": { es: "Intento mantener ese toque con quienes comparten su presencia en mis clases.<br>Esto es experimental y el yoga es solo una herramienta más entre muchas otras donde puedes encontrar tu refugio.", en: "I try to keep that touch with those who share their presence in my classes.<br>This is experimental and yoga is just one more tool among many others where you can find your refuge." },
 
-    // Instructor - Phan
-    "inst_phan_style": { es: "Somatic Vinyasa / Somatic Asana", en: "Somatic Vinyasa / Somatic Asana" },
-    
-    "inst_phan_class_title": { es: "Sobre la clase", en: "About the class" },
-    "inst_phan_class_intro": { es: "Es una práctica de movimiento consciente que fusiona el yoga con educación somática, ayudándonos a reconectar profundamente con nuestro soma.", en: "It is a practice of conscious movement that fuses yoga with somatic education, helping us reconnect deeply with our soma." },
-    "inst_phan_class_soma_title": { es: "Soma o somático:", en: "Soma or somatic:" },
-    "inst_phan_class_soma_text": { es: "No se refiere solo al cuerpo físico, sino a la totalidad de nuestro ser: espíritu, mente, cuerpo, emociones y fisiología. En cada clase, mediante movimientos y respiración, yoga somatico busca regresar a un cuerpo vivo, habitándolo con presencia y consciencia diluyendo esas emociones retenidas para poder sentirnos en totalidad.", en: "It refers not only to the physical body, but to the totality of our being: spirit, mind, body, emotions, and physiology. In each class, through movement and breathing, somatic yoga seeks to return to a living body, inhabiting it with presence and consciousness, diluting those retained emotions to be able to feel ourselves in totality." },
-    "inst_phan_class_outro": { es: "Cada sesión se convierte en una meditación profunda en movimiento, liberando tensiones y patrones en el sistema nervioso, transformando nuestra percepción de quiénes somos y de lo que es posible.", en: "Each session becomes a deep meditation in movement, releasing tensions and patterns in the nervous system, transforming our perception of who we are and what is possible." },
-
-    "inst_phan_about_title": { es: "Sobre mí", en: "About me" },
-    "inst_phan_bio_role": { es: "Sexological Bodyworker, Yoga con enfoque Somático.", en: "Sexological Bodyworker, Yoga with Somatic approach." },
-    "inst_phan_bio_quote": { es: "\"Parte importante de mi caminar es el dejar huellas. Me pongo al servicio de otras mujeres como yo que han decidido ser valientes y fuertes, autonomas, revolucionarias, dueñas de su placer. Retomando la conexión con nuestros cuerpos, liberándonos de las violencias tan comunes que existen hacia nuestro género. Soltando las ataduras del trauma y limitantes no solo por nosotras, sino por nuestras ancestras que caminaron con sus propios retos para que nosotras ahora podamos volar.\"", en: "\"An important part of my path is leaving footprints. I place myself at the service of other women like me who have decided to be brave and strong, autonomous, revolutionary, owners of their pleasure. Resuming the connection with our bodies, freeing ourselves from the violence so common towards our gender. Releasing the bonds of trauma and limits not only for ourselves, but for our ancestors who walked with their own challenges so that we can now fly.\"" },
-    
-    "inst_phan_bio_exp_1": { es: "Con 10 años de práctica de Asana. Se ha formado en Tantra Vinyasa, en su tiempo viviendo en Egipto estudió sobre Yoga Nidra y Meditación. También es estudiante de estilos modernos como Prana Flow.", en: "With 10 years of Asana practice. She has trained in Tantra Vinyasa, during her time living in Egypt she studied Yoga Nidra and Meditation. She is also a student of modern styles like Prana Flow." },
-    "inst_phan_bio_exp_2": { es: "Se formó en Brasil en el Instituto Latinoamericano de Sexología Somática.", en: "She trained in Brazil at the Latin American Institute of Somatic Sexology." },
-    
-    "inst_phan_quote_footer": { es: "Me gusta ayudar a las personas a vivir en Placer.", en: "I like helping people live in Pleasure." },
 
     // Schedule
     "sched_back": { es: "&larr; Volver al inicio", en: "&larr; Back to home" },
     "sched_page_title": { es: "Nuestros Horarios", en: "Our Schedule" },
     "sched_notice": { es: "Para cuidar tu tiempo, te pedimos por favor contactarnos para darte horarios actualizados.", en: "To respect your time, please contact us for updated schedules." },
     "sched_ask_availability": { es: "Preguntar por disponibilidad", en: "Ask about availability" },
-    "sched_phan_notice": { es: "Los horarios de la instructora Phan son únicamente por reservación.", en: "Instructor Phan's classes are by reservation only." },
-    "sched_book_phan": { es: "Agendar clase con Phan", en: "Book a class with Phan" },
+
     "sched_tap_hint": { es: "Toca la tabla para verla en pantalla completa", en: "Tap the table to view fullscreen" },
     "sched_col_time": { es: "Hora", en: "Time" },
     "sched_days": {

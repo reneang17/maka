@@ -25,19 +25,7 @@ export const instructorsData = {
         classDesc_en: '',
         phone: '529513464383'
     },
-    'phan': {
-        name: 'Phan',
-        style: 'Somatic Vinyasa / Somatic Asana',
-        style_en: 'Somatic Vinyasa / Somatic Asana',
-        image: 'assets/instructoras/Phan.jpeg',
-        bio: 'Sexological Bodyworker, Yoga con enfoque Somático. Parte importante de mi caminar es el dejar huellas. Me pongo al servicio de otras mujeres como yo que han decidido ser valientes y fuertes, autonomas, revolucionarias, dueñas de su placer.',
-        bio_en: 'Sexological Bodyworker, Yoga with Somatic approach. An important part of my path is leaving footprints. I place myself at the service of other women like me who have decided to be brave and strong, autonomous, revolutionary, owners of their pleasure.',
-        quote: 'Me gusta ayudar a las personas a vivir en Placer',
-        quote_en: 'I like helping people live in Pleasure',
-        classDesc: 'Es una práctica de movimiento consciente que fusiona el yoga con educación somática, ayudándonos a reconectar profundamente con nuestro soma.',
-        classDesc_en: 'It is a practice of conscious movement that fuses yoga with somatic education, helping us reconnect deeply with our soma.',
-        phone: '529513464383'
-    },
+
     'karina': {
         name: 'Karina',
         style: 'Hatha Yoga & Hatha Suave',
