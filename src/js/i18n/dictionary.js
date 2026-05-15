@@ -182,7 +182,8 @@ export const translations = {
     "sched_page_title": { es: "Nuestros Horarios", en: "Our Schedule" },
     "sched_notice": { es: "Para cuidar tu tiempo, te pedimos por favor contactarnos para darte horarios actualizados.", en: "To respect your time, please contact us for updated schedules." },
     "sched_ask_availability": { es: "Preguntar por disponibilidad", en: "Ask about availability" },
-
+    "sched_alosja_notice": { es: "Los horarios de la instructora Alosja son únicamente por reservación.", en: "Instructor Alosja's classes are by reservation only." },
+    "sched_book_alosja": { es: "Agendar clase con Alosja", en: "Book a class with Alosja" },
     "sched_tap_hint": { es: "Toca la tabla para verla en pantalla completa", en: "Tap the table to view fullscreen" },
     "sched_col_time": { es: "Hora", en: "Time" },
     "sched_days": {
