@@ -199,7 +199,7 @@ export const translations = {
 
     "cls_align": { es: "Alineamiento Restaurativo", en: "Restorative Alignment" },
     "cls_hatha": { es: "Hatha Yoga", en: "Hatha Yoga" },
-    "cls_hatha_gentle": { es: "Hatha Yoga suave", en: "Gentle Hatha Yoga" },
+    "cls_hatha_gentle": { es: "Hatha Yoga<br>Suave", en: "Gentle<br>Hatha Yoga" },
     "cls_vinyasa_som": { es: "Vinyasa somática", en: "Somatic Vinyasa" },
     "cls_vinyasa": { es: "Vinyasa", en: "Vinyasa" },
     "cls_yin": { es: "Yin Yoga", en: "Yin Yoga" },
