@@ -225,8 +225,25 @@ function initScrollEffects() {
         if (pageId === 'home') {
             // Re-trigger scroll check
             window.dispatchEvent(new Event('scroll'));
+            whatsappBtn.href = "https://wa.me/529513464383";
         } else {
             whatsappBtn.classList.remove('opacity-0', 'pointer-events-none');
+            
+            if (pageId.startsWith('instructor-')) {
+                const nameMap = {
+                    'maria': 'María',
+                    'alosja': 'Alosja',
+                    'karina': 'Karina'
+                };
+                const key = pageId.replace('instructor-', '');
+                if (nameMap[key]) {
+                    whatsappBtn.href = `https://wa.me/529513464383?text=${encodeURIComponent('Hola, me interesa preguntar sobre las clases con ' + nameMap[key])}`;
+                } else {
+                    whatsappBtn.href = "https://wa.me/529513464383";
+                }
+            } else {
+                whatsappBtn.href = "https://wa.me/529513464383";
+            }
         }
     }
 }
