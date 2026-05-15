@@ -239,18 +239,18 @@ function initInstructors() {
         const key = item.getAttribute('data-instructor');
         const isDisabled = disabledProfiles.includes(key);
         
-        // Check if this is in the schedule table
-        const isInScheduleTable = item.closest('#page-schedule table');
+        // Check if this is in the schedule section
+        const isInSchedule = item.closest('#page-schedule');
         
         // For Team page cards of disabled instructors, remove clickable styling
-        if (!isInScheduleTable && isDisabled) {
+        if (!isInSchedule && isDisabled) {
             item.classList.remove('cursor-pointer');
             item.classList.add('cursor-default');
             return; // Don't add click handler
         }
         
         item.addEventListener('click', () => {
-            if (isInScheduleTable) {
+            if (isInSchedule) {
                 // Show class options modal for schedule cells
                 showClassOptionsModal(key, item, isDisabled);
             } else {
@@ -458,7 +458,8 @@ function showClassOptionsModal(instructorKey, cellElement, hideProfile = false) 
     
     // Get class name from the cell
     const classNameEl = cellElement.querySelector('[data-i18n]');
-    const className = classNameEl ? classNameEl.textContent : 'Yoga';
+    const classNameHTML = classNameEl ? classNameEl.innerHTML : 'Yoga';
+    const classNamePlain = classNameEl ? classNameEl.textContent.trim().replace(/\s+/g, ' ') : 'Yoga';
     
     // Get current language
     const lang = languageManager.currentLang || 'es';
@@ -466,7 +467,7 @@ function showClassOptionsModal(instructorKey, cellElement, hideProfile = false) 
     const viewProfileText = lang === 'en' ? `View ${data.name}'s profile` : `Ver perfil de ${data.name}`;
     
     // Populate modal
-    titleEl.textContent = className;
+    titleEl.innerHTML = classNameHTML;
     instructorEl.textContent = `${withText} ${data.name}`;
     
     // Hide or show profile button based on whether profile is disabled
@@ -479,7 +480,7 @@ function showClassOptionsModal(instructorKey, cellElement, hideProfile = false) 
     }
     
     // Setup WhatsApp link (Always in Spanish for the receptionist)
-    const message = `Hola, quisiera preguntar por disponibilidad para la clase de ${className} con ${data.name}`;
+    const message = `Hola, quisiera preguntar por disponibilidad para la clase de ${classNamePlain} con ${data.name}`;
     whatsappLink.href = `https://wa.me/${data.phone}?text=${encodeURIComponent(message)}`;
     
     // Show modal

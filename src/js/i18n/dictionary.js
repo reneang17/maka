@@ -197,7 +197,7 @@ export const translations = {
     },
     // Classes
 
-    "cls_align": { es: "Alineamiento Restaurativo", en: "Restorative Alignment" },
+    "cls_align": { es: "Alineamiento Restaurativo<br><span class='text-xs opacity-75 font-normal tracking-wide'>(solo por reservación)</span>", en: "Restorative Alignment<br><span class='text-xs opacity-75 font-normal tracking-wide'>(by reservation only)</span>" },
     "cls_hatha": { es: "Hatha Yoga", en: "Hatha Yoga" },
     "cls_hatha_gentle": { es: "Hatha Yoga<br>Suave", en: "Gentle<br>Hatha Yoga" },
     "cls_vinyasa_som": { es: "Vinyasa somática", en: "Somatic Vinyasa" },
