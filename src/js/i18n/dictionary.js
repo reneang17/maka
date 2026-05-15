@@ -186,6 +186,9 @@ export const translations = {
     "sched_book_alosja": { es: "Agendar clase con Alosja", en: "Book a class with Alosja" },
     "sched_tap_hint": { es: "Toca la tabla para verla en pantalla completa", en: "Tap the table to view fullscreen" },
     "sched_col_time": { es: "Hora", en: "Time" },
+    "sched_new": { es: "NUEVO", en: "NEW" },
+    "sched_sat_desc": { es: "Perfecto para comenzar tu fin de semana con energía y presencia.", en: "Perfect to start your weekend with energy and presence." },
+    "sched_sun_desc": { es: "Las clases de Domingo no están incluidas en los paquetes ni en los pases.", en: "Sunday classes are not included in packages or passes." },
     "sched_days": {
         "mon": { es: "Lunes", en: "Monday" },
         "tue": { es: "Martes", en: "Tuesday" },
