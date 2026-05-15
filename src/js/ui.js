@@ -221,14 +221,16 @@ function initScrollEffects() {
         }
     });
 
+    const defaultMsg = encodeURIComponent('Hola, te escribo desde la página de Maka Yoga. ¿Me puedes dar más información?');
+
     function updateWhatsAppVisibility(pageId) {
         if (pageId === 'home') {
             // Re-trigger scroll check
             window.dispatchEvent(new Event('scroll'));
-            whatsappBtn.href = "https://wa.me/529513464383";
+            whatsappBtn.href = `https://wa.me/529513464383?text=${defaultMsg}`;
         } else {
             whatsappBtn.classList.remove('opacity-0', 'pointer-events-none');
-            
+
             if (pageId.startsWith('instructor-')) {
                 const nameMap = {
                     'maria': 'María',
@@ -239,10 +241,10 @@ function initScrollEffects() {
                 if (nameMap[key]) {
                     whatsappBtn.href = `https://wa.me/529513464383?text=${encodeURIComponent('Hola, me interesa preguntar sobre las clases con ' + nameMap[key])}`;
                 } else {
-                    whatsappBtn.href = "https://wa.me/529513464383";
+                    whatsappBtn.href = `https://wa.me/529513464383?text=${defaultMsg}`;
                 }
             } else {
-                whatsappBtn.href = "https://wa.me/529513464383";
+                whatsappBtn.href = `https://wa.me/529513464383?text=${defaultMsg}`;
             }
         }
     }
