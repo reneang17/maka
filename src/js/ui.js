@@ -28,7 +28,7 @@ function initRandomInstructors() {
     const container = document.getElementById('instructors-container');
     if (!container) return; // Guard clause if container doesn't exist yet
 
-    const instructorKeys = ['maria', 'alosja', 'phan', 'karina', 'paty'];
+    const instructorKeys = ['maria', 'alosja', 'phan', 'karina', 'paty', 'andres'];
     
     // Shuffle
     instructorKeys.sort(() => Math.random() - 0.5);
@@ -235,7 +235,8 @@ function initScrollEffects() {
                 const nameMap = {
                     'maria': 'María',
                     'alosja': 'Alosja',
-                    'karina': 'Karina'
+                    'karina': 'Karina',
+                    'andres': 'Andrés'
                 };
                 const key = pageId.replace('instructor-', '');
                 if (nameMap[key]) {

@@ -176,6 +176,22 @@ export const translations = {
     "inst_karina_bio_3": { es: "Entre el ajetreo de ocupaciones, sentí que debía continuar por mi bien. Entonces continué tomando clases y encontré una fortuna, haber llegado a instructores que, más allá de la postura me ayudaron a interiorizar, fue un ¡bum! para mí, con el tiempo me di cuenta que más que encontrar un espacio físico para asistir a tomar clases, era el pretexto perfecto para entrar en mi espacio interior, encontrando un refugio.", en: "Between the hustle of occupations, I felt I had to continue for my own good. So I continued taking classes and found a fortune, having reached instructors who, beyond the posture helped me internalize, it was a boom! for me, with time I realized that more than finding a physical space to attend classes, it was the perfect pretext to enter my inner space, finding a refuge." },
     "inst_karina_bio_4": { es: "Intento mantener ese toque con quienes comparten su presencia en mis clases.<br>Esto es experimental y el yoga es solo una herramienta más entre muchas otras donde puedes encontrar tu refugio.", en: "I try to keep that touch with those who share their presence in my classes.<br>This is experimental and yoga is just one more tool among many others where you can find your refuge." },
 
+    // Instructor - Andrés
+    "inst_andres_style": { es: "Āsana, Prāṇāyāma & Dhāraṇā", en: "Āsana, Prāṇāyāma & Dhāraṇā" },
+    "inst_andres_class_title": { es: "Sobre mis clases", en: "About my classes" },
+    "inst_andres_class_desc": { 
+        es: "Un espacio íntimo y de atención plena diseñado para crear silencio y unión profunda. A través de la disciplina y la práctica constante, proponemos un viaje hacia la meditación y el gozo interno estructurado bajo una tríada poderosa:<br><br>✨ <strong>Āsana (Conexión Surya):</strong> Movimiento consciente para habitar y preparar el cuerpo.<br>🌬️ <strong>Prāṇāyāma:</strong> El arte de respirar y el control de la energía vital.<br>🧠 <strong>Dhāraṇā:</strong> Concentración profunda para calmar y observar la mente.<br><br>Al finalizar la sesión, compartiremos un momento de unión recibiendo <strong>Prasad</strong> (alimento consagrado y ofrendado) como símbolo de agradecimiento y conexión comunitaria.", 
+        en: "An intimate mindfulness space designed to create silence and deep union. Through discipline and constant practice, we propose a journey towards meditation and inner joy, structured under a powerful triad:<br><br>✨ <strong>Āsana (Surya Connection):</strong> Conscious movement to inhabit and prepare the body.<br>🌬️ <strong>Prāṇāyāma:</strong> The art of breathing and the control of vital energy.<br>🧠 <strong>Dhāraṇā:</strong> Deep concentration to calm and observe the mind.<br><br>At the end of the session, we will share a moment of union, receiving <strong>Prasad</strong> (consecrated and offered food) as a symbol of gratitude and community connection." 
+    },
+    "inst_andres_about_title": { es: "Acerca de mí", en: "About me" },
+    "inst_andres_bio": { 
+        es: "En medio del ruido constante, la confusión y la distracción del mundo actual, a veces nos movemos sin recordar hacia dónde vamos. Creo firmemente que el silencio y la calma interna son actos de valentía y re-evolución con uno mismo. A través del autoconocimiento y la disciplina constante, acompaño a quienes sienten el llamado a cultivar su gozo interno, buscando que la paz del mundo comience en la quietud de nuestro propio espacio.", 
+        en: "In the midst of the constant noise, confusion, and distraction of today's world, we sometimes move without remembering where we are going. I firmly believe that silence and inner calm are acts of bravery and a re-evolution with oneself. Through self-awareness and constant discipline, I accompany those who feel the calling to cultivate their inner joy, seeking to let the peace of the world begin in the stillness of our own space." 
+    },
+    "inst_andres_quote": { 
+        es: "La incapacidad del ser humano para sentarse tranquilamente en silencio en una habitación es la raíz de todos sus problemas. — Blaise Pascal", 
+        en: "All of humanity's problems stem from man's inability to sit quietly in a room alone. — Blaise Pascal" 
+    },
 
     // Schedule
     "sched_back": { es: "&larr; Volver al inicio", en: "&larr; Back to home" },
@@ -187,7 +203,7 @@ export const translations = {
     "sched_tap_hint": { es: "Toca la tabla para verla en pantalla completa", en: "Tap the table to view fullscreen" },
     "sched_col_time": { es: "Hora", en: "Time" },
     "sched_new": { es: "NUEVO", en: "NEW" },
-    "sched_sat_desc": { es: "Perfecto para comenzar tu fin de semana con energía y presencia.", en: "Perfect to start your weekend with energy and presence." },
+    "sched_sat_desc": { es: "Perfecto para dedicarte un tiempo el fin de semana.", en: "Perfect to dedicate some time to yourself over the weekend." },
     "sched_sun_desc": { es: "Las clases de Domingo no están incluidas en los paquetes ni en los pases.", en: "Sunday classes are not included in packages or passes." },
     "sched_days": {
         "mon": { es: "Lunes", en: "Monday" },
@@ -206,6 +222,7 @@ export const translations = {
     "cls_vinyasa_som": { es: "Vinyasa somática", en: "Somatic Vinyasa" },
     "cls_vinyasa": { es: "Vinyasa", en: "Vinyasa" },
     "cls_yin": { es: "Yin Yoga", en: "Yin Yoga" },
+    "cls_asana_pranayama_dharana": { es: "Āsana, Prāṇāyāma & Dhāraṇā", en: "Āsana, Prāṇāyāma & Dhāraṇā" },
     "cls_with": { es: "con", en: "with" },
 
     // Space
